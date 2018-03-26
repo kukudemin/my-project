@@ -1,5 +1,5 @@
 import axios from './index';
 
 export function queryBanner() {
-    return axios.get('/course/banner');
+    return axios.get('/home/banner');
 }
