@@ -46,6 +46,8 @@ class Recipe extends React.Component{
                         </div>
                     </div>
                 </a>
+
+                {/*点赞 评论*/}
                 <ul className='infoFooter'>
                     <li>
                         <div>
