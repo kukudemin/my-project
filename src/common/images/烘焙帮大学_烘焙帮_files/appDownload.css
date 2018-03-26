@@ -1,0 +1,127 @@
+@media (min-width: 1000px){
+	.backgroundWrap{
+		height:600px;
+		background-image:url(http://image.hongbeibang.com/FpY2PA5QNwlOCOV7AZuUZGVERGtG?imageView2/1/w/1000/h/667);
+	}
+	.textWarp{
+		position: relative;
+		width: 480px;
+		float: right;
+		padding: 5% 0;
+		z-index: 1;
+	}
+	.downBtn{
+		position: relative;
+		overflow: hidden;
+		margin-top: 15%;
+	}
+	.phoneImage{
+		width: 35%;
+	}
+	.swipeWrap{
+		top: 12.1%;
+		bottom: 12.7%;
+		left: 2.35%;
+		width: 30.6%;
+	}
+	.appBtnWarp{
+		position:absolute;
+		bottom:0;
+		right:20%;
+	}
+	.qrCode{
+		width:185px;
+		float: left;
+	}
+	.introduceWarp{
+		width: 33%
+	}
+	.valuation{
+		margin: 5% auto;
+	}
+}
+@media (max-width: 1000px){
+	.backgroundWrap{
+		background-image:url(http://image.hongbeibang.com/FpY2PA5QNwlOCOV7AZuUZGVERGtG?imageView2/1/w/1000/h/667);
+	}
+	.textWarp{
+		position: relative;
+		float: right;
+		overflow:hidden;
+		width: 50%;
+		padding: 5%;
+		z-index: 1;
+	}
+	.downBtn{
+		margin-top: 10%;
+		position:relative;
+	}
+	.phoneImage{
+		width: 35%;
+	}
+	.swipeWrap{
+		top: 12.1%;
+		bottom: 12.7%;
+		left: 2.35%;
+		width: 30.6%;
+	}
+	.appBtnWarp{
+		margin-top: 5%;
+		position:relative;
+		bottom:inherit;
+		right:inherit;
+		display: inline-block;
+	}
+	.qrCode{
+		position:relative;
+		bottom:inherit;
+		width:150px;
+		display: block;
+	}
+	.introduceWarp{
+		width: 33%
+	}
+	.valuation{
+		margin: 5%;
+	}
+}
+@media (max-width: 750px){
+	.backgroundWrap{
+		background-image:url(http://image.hongbeibang.com/FhmEy2DdWHEGjqLAAIplNwlKA8yF);
+	}
+	.textWarp{
+		position: relative;
+		float: inherit;
+		overflow:hidden;
+		width: 100%;
+		padding: 5% 0 0 0;
+		text-align: center;
+		z-index: 1;
+	}
+	.qrCode{
+		position:relative;
+		bottom:inherit;
+		width:150px;
+		display: block;
+		margin: 0 auto;
+	}
+	.phoneImage{
+		display: block;
+		margin: 5% auto;
+		width: 100%;
+	}
+	.swipeWrap{
+		top: 12.2%;
+		bottom: 12.7%;
+		left: 6.6%;
+		width: 87.5%;
+	}
+	.phoneImageWrap{
+		max-width: 350px;
+		width: 60%;
+		margin: 0 auto;
+	}
+	.introduceWarp{
+		width: 100%
+	}
+}
