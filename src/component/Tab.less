@@ -1,0 +1,38 @@
+.footerBox {
+  box-sizing: border-box;
+  height: 100%;
+  border-top: .02rem solid #D5D5D5;
+  background: #FFF;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 100%;
+
+    li {
+      flex: 1;
+      height: 100%;
+
+      a {
+        display: block;
+        height: 100%;
+        text-align: center;
+        font-size: .12rem;
+        color: #555;
+
+        i {
+          display: block;
+          margin: .02rem auto;
+          width: .25rem;
+          height: .25rem;
+          font-size: .25rem;
+        }
+
+        &.active {
+          color: #ffb3a2;
+        }
+      }
+    }
+  }
+}

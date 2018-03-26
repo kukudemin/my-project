@@ -1,10 +1,17 @@
 import React from "react"
-export default class Home extends React.Component{
+import Tab from "../component/Tab"
+import {connect} from 'react-redux';
+import "./Home.less"
+class Home extends React.Component{
     constructor(){
         super()
     }
     render(){
-        let a=4;
-        return <div>Home</div>
+        return <div>
+            <section className="footerContainer">
+                <Tab/>
+            </section>
+        </div>
     }
 }
+export default connect()(Home)
