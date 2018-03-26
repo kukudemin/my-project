@@ -7,7 +7,6 @@ class Tab extends React.Component{
         super()
     }
     render(){
-
         return <footer className="footerBox">
             <ul>
                 <li>

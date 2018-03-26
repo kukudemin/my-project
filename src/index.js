@@ -6,8 +6,11 @@ import store from "./store"
 import myCircle from "./container/MyCircle";
 import Home from "./container/Home";
 
+
 import "./common/css/reset.min.css"
 import "./common/css/public.less"
+
+
 
 
 ReactDOM.render(<Provider store={store}>
