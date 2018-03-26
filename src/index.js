@@ -5,6 +5,7 @@ import {Provider} from "react-redux";
 import store from "./store"
 import myCircle from "./container/MyCircle";
 import Home from "./container/Home";
+import University from "./container/University";
 
 
 ReactDOM.render(<Provider store={store}>
@@ -12,6 +13,7 @@ ReactDOM.render(<Provider store={store}>
             <Switch>
                 <Route path='/' exact component={Home}/>
                 <Route path='/circle' component={myCircle}/>
+                <Route path='/university' component={University}/>
                 <Redirect to="/"/>
             </Switch>
         </HashRouter>
