@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,shrink-to-fit=no">
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_604371_drz1r16yn769lik9.css">
+
+    <title>烘焙帮</title>
+  </head>
+  <body>
+  <script>
+      ~function () {
+          function computed() {
+              var oHTML = document.documentElement,
+                  winW = oHTML.clientWidth,
+                  desW = 320;
+              if (winW >= desW) {
+                  oHTML.style.fontSize = '100px';
+                  return;
+              }
+              oHTML.style.fontSize = winW / desW * 100 + 'px';
+          }
+          computed();
+          window.addEventListener('resize', computed, false);
+      }();
+  </script>
+    <div id="root"></div>
+
+  </body>
+</html>
