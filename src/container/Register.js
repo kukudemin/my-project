@@ -1,29 +1,8 @@
-// import React from "react";
-// import ReactDom from "react-dom";
-// import "./Register.less"
-// class Register extends React.Component {
-//
-//
-//     render() {
-//         return <div className="register">
-//             <div className="register-title">登录</div>
-//             <img className="register-img" src="https://image.hongbeibang.com/FkycjRlqWYQkgF7gDYEsq1ViZiVW?750X440&imageView2/1/w/510/h/299" alt=""/>
-//             <div className="register-e">烘焙帮超有爱</div>
-//             <div className="input-group">
-//                 <input type="text" className="form-control" placeholder="用户姓名:"/>
-//                 <input type="text" className="form-control" placeholder="用户密码:"/>
-//             </div>
-//             <button className="register-btn">登录</button>
-//             <a className="register-f" href="#">其他登录方式</a>
-//         </div>
-//
-//     }
-// }
-//
-// export default Register;
+
 
 
 import React, {Component} from 'react';
+
 import "./Register.less"
 import fetch from 'isomorphic-fetch';
 
@@ -67,20 +46,30 @@ class Register extends Component {
     render() {
         let {username, password} = this.state;
         return (
+         <div className="register">
+             <div className="register-s7e1f0f36"></div>
+             <div className="register-header">
+                 <img className="register-img" src="https://image.hongbeibang.com/FvbI_v3ce7nuHZq3Cq5yd37BvjuG?94X94&imageView2/1/w/50/h/50" alt=""/>
+                 <ul className="register-login">登录</ul>
+             </div>
+             <div className="register-s-505debda">
+                 <img className="register-s-34f4f4a1" src="https://image.hongbeibang.com/FkycjRlqWYQkgF7gDYEsq1ViZiVW?750X440&imageView2/1/w/510/h/299" alt=""/>
+             </div>
+             <div className="register-s-5566e7c3">烘焙帮超有爱</div>
+             <div className="register-s747151b9">
+                 <div className="register-s-488bd9c1">
+                     <img className="register-s-34f4f4a1" src="" alt=""/>
+                     <div className="register-s6cdc22ab">微信登录</div>
+                 </div>
+                 <div className="register-s-24e0dc36">
+                     <span>帮友们，抽空看看我们的</span>
+                     <span style={{color:"#1976D2",textDecoration:"underline"}}>服务条款</span>
+                     <span>呗</span>
+                 </div>
+             </div>
+             <div className="register-s-51e4d797">其他登录方式</div>
+         </div>
 
-            <div className="register" onChange={(e) => this.stateChange(e)}>
-                <div className="register-title">登录</div>
-                <img className="register-img"
-                     src="https://image.hongbeibang.com/FkycjRlqWYQkgF7gDYEsq1ViZiVW?750X440&imageView2/1/w/510/h/299"
-                     alt=""/>
-                <div className="register-e">烘焙帮超有爱</div>
-                <div className="input-group">
-                    <input className="form-control" value={this.state.username} type="text" placeholder="请输入用户名"/>
-                    <input className="form-control" value={this.state.password} type="password" placeholder="请输入密码"/>
-                </div>
-                <button className="register-btn" onClick={() => this.saveUser()}>立即注册</button>
-                <a className="register-f" href="#">其他登录方式</a>
-            </div>
         );
     }
 }

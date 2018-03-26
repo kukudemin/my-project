@@ -18,7 +18,7 @@ ReactDOM.render(<Provider store={store}>
             <Switch>
                 <Route path='/' exact component={Home}/>
                 <Route path='/circle' component={myCircle}/>
-               <Route path='/register' component={Register}/>
+                <Route path='/register' component={Register}/>
                 <Route path='/university' component={University}/>
                 <Redirect to="/"/>
             </Switch>
