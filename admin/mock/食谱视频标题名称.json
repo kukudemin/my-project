@@ -1,0 +1,135 @@
+{
+    "code":0,
+　　"data":{
+　　　　"client":{
+　　　　　　"address":"",
+　　　　　　"areaCode":"",
+　　　　　　"beginTime":"0001-01-01 00:00:00",
+　　　　　　"clientId":0,
+　　　　　　"clientIds":[
+
+　　　　　　],
+　　　　　　"createTime":"0001-01-01 00:00:00",
+　　　　　　"district":"",
+　　　　　　"endTime":"0001-01-01 00:00:00",
+　　　　　　"gender":0,
+　　　　　　"image":"",
+　　　　　　"ip":"",
+　　　　　　"isBindQq":0,
+　　　　　　"isBindWx":0,
+　　　　　　"isGoldName":false,
+　　　　　　"isMaster":0,
+　　　　　　"isNew":0,
+　　　　　　"isTeacher":false,
+　　　　　　"levelImage":"",
+　　　　　　"mail":"",
+　　　　　　"miniProgramEducationOpenId":"",
+　　　　　　"modifyTime":"0001-01-01 00:00:00",
+　　　　　　"mood":"",
+　　　　　　"name":"",
+　　　　　　"noticePhone":"",
+　　　　　　"officialEditor":0,
+　　　　　　"openId":"",
+　　　　　　"payOpenId":"",
+　　　　　　"phone":"",
+　　　　　　"sign":"",
+　　　　　　"type":0,
+　　　　　　"unionId":"",
+　　　　　　"uniqueKey":"",
+　　　　　　"year":0
+　　　　},
+　　　　"collection":{
+　　　　　　"beautyNum":0,
+　　　　　　"clientId":176757,
+　　　　　　"clientImage":"http://image.hongbeibang.com/FjiGYFNThl1v8VGbpBRjkb9v50zQ?1080X1620&http://image.hongbeibang.com/Futpn5G9gS59XOj_30J9zixP_6zF?200X200",
+　　　　　　"clientName":"帮主阿涛",
+　　　　　　"clientSign":"烘焙如嫣，美人如馐",
+　　　　　　"collectNum":1108,
+　　　　　　"collectionType":0,
+　　　　　　"comment":{
+　　　　　　　　"count":0,
+　　　　　　　　"data":[
+
+　　　　　　　　]
+　　　　　　},
+　　　　　　"commentNum":0,
+　　　　　　"component":{
+　　　　　　　　"count":0,
+　　　　　　　　"data":[
+
+　　　　　　　　]
+　　　　　　},
+　　　　　　"contentCollectionId":28638,
+　　　　　　"contentId":9663944,
+　　　　　　"coverImage":"https://image.hongbeibang.com/Fl1_NjPmsBe7qmUBKc0oL87cofdr?750X350",
+　　　　　　"coverSummary":"我是帮主阿涛，80后乐天派，热爱烘焙和健身，经常登山和马拉松，喜欢一切挑战自我的事物。你若留言，我必知无不言，言无不尽！",
+　　　　　　"coverTitle":"帮主阿涛教烘焙",
+　　　　　　"createTime":"2017-10-18 17:13:04",
+　　　　　　"easyNum":0,
+　　　　　　"hasAdded":false,
+　　　　　　"hateNum":0,
+　　　　　　"hotNum":0,
+　　　　　　"image":"https://image.hongbeibang.com/Fl1_NjPmsBe7qmUBKc0oL87cofdr?750X350",
+　　　　　　"introduce":"<p style="text-align: center;"><span style="color: rgb(136, 136, 136); font-family: "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif; font-size: 14px; line-height: 21px; widows: 1; background-color: rgb(255, 255, 255);">我是帮主阿涛，80后乐天派，热爱烘焙和健身，经常登山和马拉松，喜欢一切挑战自我的事物。你若留言，我必知无不言，言无不尽！</span></p><p style="text-align: center;"><span style="color: rgb(136, 136, 136); font-family: "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif; font-size: 14px; line-height: 21px; widows: 1; background-color: rgb(255, 255, 255);"></span></p><section data-author="Wxeditor"><article id="m2357" class="yead_editor" data-author="Wxeditor" style="font-size:14px;margin:5px auto;"><section style="border:0;margin:0;padding:0"><section class="wx-bg" data-wxsrc="http://mmbiz.qpic.cn/mmbiz_gif/v4vz52CcB104skCcbWPfyoQ5iaFXjMTBjxAWKgWE07gmWibg99JkXe8hDyC7EuWicHsdEpWP8VLWhV2L6VpTibd9PQ/0" style="padding:0;border-style:solid;-webkit-border-image:url(http://imgcdn.wxeditor.com/Uploads/Material/59e6f6c7cf24a.gif) 10 fill;border-width:5px 3px;margin:0 auto;-webkit-transform:rotate(0deg);width:100%"><section style="color: rgb(51, 51, 51); line-height: 30px; padding: 5px 10px; margin: 0px;"><p style="font-size: 16px; white-space: normal; text-align: center;"><span style="color: rgb(255, 76, 65);"><strong><span style="font-size: 14px; font-family: 微软雅黑, "Microsoft YaHei";">关注烘焙帮官方公众号：hongbeibang</span></strong></span><span style="font-size: 14px; color: rgb(127, 127, 127); font-family: 微软雅黑, "Microsoft YaHei";"><br/></span></p><p style="font-size: 16px; white-space: normal; text-align: center;"><span style="font-size: 14px; color: rgb(127, 127, 127); font-family: 微软雅黑, "Microsoft YaHei";">帮主阿涛，每天视频教大家一个新烘焙！</span></p></section></section></section></article></section>",
+　　　　　　"isMaster":0,
+　　　　　　"likeNum":0,
+　　　　　　"modifyTime":"2018-03-25 18:24:04",
+　　　　　　"prefixTitle":"",
+　　　　　　"rewardClient":{
+　　　　　　　　"count":0,
+　　　　　　　　"data":[
+
+　　　　　　　　]
+　　　　　　},
+　　　　　　"rewardNum":0,
+　　　　　　"shareNum":488,
+　　　　　　"shareTitle":"",
+　　　　　　"state":2,
+　　　　　　"style":1,
+　　　　　　"thankNum":0,
+　　　　　　"title":"帮主阿涛教烘焙",
+　　　　　　"totalNum":0,
+　　　　　　"totalScore":0,
+　　　　　　"type":3,
+　　　　　　"visitClient":{
+　　　　　　　　"clientId":0,
+　　　　　　　　"clientImage":"",
+　　　　　　　　"clientName":"",
+　　　　　　　　"collectNum":0,
+　　　　　　　　"collectTime":"0001-01-01 00:00:00",
+　　　　　　　　"contentClientId":0,
+　　　　　　　　"contentClientRewardId":0,
+　　　　　　　　"contentId":9663944,
+　　　　　　　　"contentType":0,
+　　　　　　　　"createTime":"0001-01-01 00:00:00",
+　　　　　　　　"isFollow":false,
+　　　　　　　　"isThank":false,
+　　　　　　　　"likeNum":0,
+　　　　　　　　"likeTime":"0001-01-01 00:00:00",
+　　　　　　　　"modifyTime":"0001-01-01 00:00:00",
+　　　　　　　　"recvClientId":0,
+　　　　　　　　"recvClientImage":"",
+　　　　　　　　"recvClientName":"",
+　　　　　　　　"rewardNum":0,
+　　　　　　　　"rewardTime":"0001-01-01 00:00:00",
+　　　　　　　　"sendClientId":0,
+　　　　　　　　"sendClientImage":"",
+　　　　　　　　"sendClientName":"",
+　　　　　　　　"shareNum":0,
+　　　　　　　　"shareTime":"0001-01-01 00:00:00",
+　　　　　　　　"thankNum":0,
+　　　　　　　　"thankTime":"0001-01-01 00:00:00",
+　　　　　　　　"visitNum":0,
+　　　　　　　　"visitTime":"0001-01-01 00:00:00"
+　　　　　　},
+　　　　　　"visitNum":1929666
+　　　　}
+　　},
+　　"msg":"",
+　　"remindPoint":{
+　　　　"count":0,
+　　　　"data":[
+
+　　　　]
+　　}
+}

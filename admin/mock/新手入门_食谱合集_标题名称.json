@@ -1,0 +1,135 @@
+{
+    "code":0,
+　　"data":{
+　　　　"client":{
+　　　　　　"address":"",
+　　　　　　"areaCode":"",
+　　　　　　"beginTime":"0001-01-01 00:00:00",
+　　　　　　"clientId":0,
+　　　　　　"clientIds":[
+
+　　　　　　],
+　　　　　　"createTime":"0001-01-01 00:00:00",
+　　　　　　"district":"",
+　　　　　　"endTime":"0001-01-01 00:00:00",
+　　　　　　"gender":0,
+　　　　　　"image":"",
+　　　　　　"ip":"",
+　　　　　　"isBindQq":0,
+　　　　　　"isBindWx":0,
+　　　　　　"isGoldName":false,
+　　　　　　"isMaster":0,
+　　　　　　"isNew":0,
+　　　　　　"isTeacher":false,
+　　　　　　"levelImage":"",
+　　　　　　"mail":"",
+　　　　　　"miniProgramEducationOpenId":"",
+　　　　　　"modifyTime":"0001-01-01 00:00:00",
+　　　　　　"mood":"",
+　　　　　　"name":"",
+　　　　　　"noticePhone":"",
+　　　　　　"officialEditor":0,
+　　　　　　"openId":"",
+　　　　　　"payOpenId":"",
+　　　　　　"phone":"",
+　　　　　　"sign":"",
+　　　　　　"type":0,
+　　　　　　"unionId":"",
+　　　　　　"uniqueKey":"",
+　　　　　　"year":0
+　　　　},
+　　　　"collection":{
+　　　　　　"beautyNum":0,
+　　　　　　"clientId":690674,
+　　　　　　"clientImage":"http://image.hongbeibang.com/FhYL_0NGpDP3IBgEBtJM-ftPa9Jb?500X473&http://image.hongbeibang.com/FgYNUI8SDC-rgJMn31EuWKWYhWBh?200X200",
+　　　　　　"clientName":"小七@烘焙帮",
+　　　　　　"clientSign":"QQ",
+　　　　　　"collectNum":6957,
+　　　　　　"collectionType":0,
+　　　　　　"comment":{
+　　　　　　　　"count":0,
+　　　　　　　　"data":[
+
+　　　　　　　　]
+　　　　　　},
+　　　　　　"commentNum":0,
+　　　　　　"component":{
+　　　　　　　　"count":0,
+　　　　　　　　"data":[
+
+　　　　　　　　]
+　　　　　　},
+　　　　　　"contentCollectionId":10148,
+　　　　　　"contentId":3683226,
+　　　　　　"coverImage":"https://image.hongbeibang.com/FsTMzTK-JgyHHtnH-7irK7DyP8Kk?644X301",
+　　　　　　"coverSummary":"跟着我们，从新手变成烘焙达人吧！",
+　　　　　　"coverTitle":"新手入门",
+　　　　　　"createTime":"2016-10-03 01:02:40",
+　　　　　　"easyNum":1000000,
+　　　　　　"hasAdded":false,
+　　　　　　"hateNum":0,
+　　　　　　"hotNum":5.891066112336705,
+　　　　　　"image":"https://image.hongbeibang.com/FsTMzTK-JgyHHtnH-7irK7DyP8Kk?644X301",
+　　　　　　"introduce":"<p style="text-align: center;"><span style="color: rgb(85, 85, 85); font-family: 'hiragino sans gb', 'microsoft yahei', arial, sans-sarif; font-size: 13.3333px; line-height: 22px; background-color: rgb(255, 255, 255);"><span style="color: rgb(85, 85, 85); font-family: 'hiragino sans gb', 'microsoft yahei', arial, sans-sarif; font-size: 13.3333px; font-variant-ligatures: normal; orphans: 2; text-align: center; widows: 2; background-color: rgb(255, 255, 255);">跟着我们，从新手变成烘焙达人吧！</span></span></p>",
+　　　　　　"isMaster":0,
+　　　　　　"likeNum":0,
+　　　　　　"modifyTime":"2018-03-25 18:21:27",
+　　　　　　"prefixTitle":"",
+　　　　　　"rewardClient":{
+　　　　　　　　"count":0,
+　　　　　　　　"data":[
+
+　　　　　　　　]
+　　　　　　},
+　　　　　　"rewardNum":0,
+　　　　　　"shareNum":1744,
+　　　　　　"shareTitle":"",
+　　　　　　"state":2,
+　　　　　　"style":1,
+　　　　　　"thankNum":0,
+　　　　　　"title":"新手入门",
+　　　　　　"totalNum":0,
+　　　　　　"totalScore":0,
+　　　　　　"type":3,
+　　　　　　"visitClient":{
+　　　　　　　　"clientId":0,
+　　　　　　　　"clientImage":"",
+　　　　　　　　"clientName":"",
+　　　　　　　　"collectNum":0,
+　　　　　　　　"collectTime":"0001-01-01 00:00:00",
+　　　　　　　　"contentClientId":0,
+　　　　　　　　"contentClientRewardId":0,
+　　　　　　　　"contentId":3683226,
+　　　　　　　　"contentType":0,
+　　　　　　　　"createTime":"0001-01-01 00:00:00",
+　　　　　　　　"isFollow":false,
+　　　　　　　　"isThank":false,
+　　　　　　　　"likeNum":0,
+　　　　　　　　"likeTime":"0001-01-01 00:00:00",
+　　　　　　　　"modifyTime":"0001-01-01 00:00:00",
+　　　　　　　　"recvClientId":0,
+　　　　　　　　"recvClientImage":"",
+　　　　　　　　"recvClientName":"",
+　　　　　　　　"rewardNum":0,
+　　　　　　　　"rewardTime":"0001-01-01 00:00:00",
+　　　　　　　　"sendClientId":0,
+　　　　　　　　"sendClientImage":"",
+　　　　　　　　"sendClientName":"",
+　　　　　　　　"shareNum":0,
+　　　　　　　　"shareTime":"0001-01-01 00:00:00",
+　　　　　　　　"thankNum":0,
+　　　　　　　　"thankTime":"0001-01-01 00:00:00",
+　　　　　　　　"visitNum":0,
+　　　　　　　　"visitTime":"0001-01-01 00:00:00"
+　　　　　　},
+　　　　　　"visitNum":9914262
+　　　　}
+　　},
+　　"msg":"",
+　　"remindPoint":{
+　　　　"count":0,
+　　　　"data":[
+
+　　　　]
+　　}
+}
