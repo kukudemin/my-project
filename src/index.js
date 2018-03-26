@@ -5,7 +5,7 @@ import {Provider} from "react-redux";
 import store from "./store"
 import myCircle from "./container/MyCircle";
 import Home from "./container/Home";
-
+import "./common/css/reset.css"
 
 ReactDOM.render(<Provider store={store}>
         <HashRouter>
