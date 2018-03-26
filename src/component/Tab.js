@@ -4,7 +4,7 @@ export default class Tab extends React.Component{
         super()
     }
     render(){
-        let b=16;
+        let b=20;
         return <div>Tab</div>
     }
 }
