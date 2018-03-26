@@ -8,6 +8,12 @@ import Home from "./container/Home";
 import University from "./container/University";
 
 
+import "./common/css/reset.min.css"
+import "./common/css/public.less"
+
+
+
+
 ReactDOM.render(<Provider store={store}>
         <HashRouter>
             <Switch>
