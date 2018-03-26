@@ -11,6 +11,7 @@ class myCircle extends React.Component{
     constructor(){
         super();
     }
+
     render(){
         return (
             <section className='myCircle'>
