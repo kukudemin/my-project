@@ -3,9 +3,20 @@ import Tab from "../component/Tab"
 import Banner from "../component/Banner"
 import {connect} from 'react-redux';
 import "./Home.less"
+import {queryBanner} from "../api/home";
 class Home extends React.Component{
     constructor(){
-        super()
+        super();
+        this.state={
+            bannerData:[]
+        }
+    }
+
+    async componentWillMount(){
+        let result=await queryBanner();
+        this.setState({
+            bannerData:result
+        })
     }
     render(){
         return <div>
@@ -17,7 +28,7 @@ class Home extends React.Component{
                 </div>
             </section>
             <section className="container">
-                <Banner/>
+                <Banner data={this.state.bannerData} auto={2000}/>
             </section>
             <section className="footerContainer">
                 <Tab/>

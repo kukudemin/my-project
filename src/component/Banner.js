@@ -2,6 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 import ReactSwipe from "react-swipe"
 import PropTypes from "prop-types"
+import "./Banner.less"
 class Banner extends React.Component{
     static defaultProps = {
         data: [],
@@ -18,14 +19,47 @@ class Banner extends React.Component{
         isFocus: PropTypes.bool
     };
 
-    constructor(){
-        super()
+    constructor(props){
+        super(props);
+        this.state={
+            step:props.initSlide
+        }
     }
-    render(){
-        return <div className="bannerBox">
-            <ReactSwipe>
 
+    render(){
+        let {data,auto,initSlide,isFocus}=this.props;
+        if (data.length === 0) {
+            return null;
+        }
+        return <div className="bannerBox">
+            <ReactSwipe swipeOptions={{
+                startSlide:initSlide,
+                auto:auto,
+                callback:(index)=>{
+                    this.setState({
+                        step:index
+                    })
+                }
+            }}>
+                {
+                    data.banner1.map((item,index)=>{
+                        return <div key={index}>
+                            <img src={item.img} alt=""/>
+                        </div>
+                    })
+                }
             </ReactSwipe>
+            {
+                isFocus?<ul className="focus">
+                    {
+                        data.banner1.map((item,index)=>{
+                            return <li key={index} className={index===this.state.step?"active":null}>
+
+                            </li>
+                        })
+                    }
+                </ul>:null
+            }
         </div>
     }
 }
