@@ -2,7 +2,7 @@ import React from "react";
 import ReactDom from "react-dom";
 import "./Profile.less"
 import HeadPortrait from "../component/PersonalInformation/HeadPortrait";
-
+import Tab from "../component/Tab"
 export default class Profile extends React.Component {
 
 
@@ -17,6 +17,7 @@ export default class Profile extends React.Component {
                     </span>
                 </div>
                <HeadPortrait/>
+                <Tab/>
             </div>
         </div>
 

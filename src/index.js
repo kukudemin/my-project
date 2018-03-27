@@ -30,11 +30,11 @@ ReactDOM.render(<Provider store={store}>
 
                 <Route path='/register' component={Register}/>
                 <Route path='/university' component={University}/>
-<<<<<<< HEAD
+
                 <Route path='/profile' component={Profile}/>
-=======
+
                 <Route path='/newHand' component={NewHand}/>
->>>>>>> 4e5d9b2597ec3f387ed4da86d0c13c1ad73151b4
+
                 <Redirect to="/"/>
             </Switch>
         </HashRouter>
