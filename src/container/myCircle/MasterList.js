@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {connect} from "react-redux"
+import Recipe from "../../component/recipe/Recipe"
+import CookBook from "../../component/recipe/CookBook"
 
 class MasterList extends React.Component{
     constructor(){
@@ -9,7 +11,11 @@ class MasterList extends React.Component{
 
     render(){
         return (
-            <div>MasterList</div>
+            <div>
+                <Recipe/>
+                <CookBook/>
+            </div>
+
         )
     }
 }

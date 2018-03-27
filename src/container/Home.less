@@ -1,7 +1,183 @@
+
+
+
+.navContainer{
+  box-sizing: border-box;
+  height: .44rem;
+  width: 100%;
+  padding: 0 .13rem;
+
+  .header{
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span:nth-child(1){
+      width: .25rem;
+      height: .25rem;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    span:nth-child(2){
+      font-size: .18rem;
+      font-weight: bold;
+    }
+    span:nth-child(3) {
+      width: .25rem;
+      height: .25rem;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.container{
+
+  .search{
+    padding: .1rem .15rem;
+    width: 2.9rem;
+    height: .35rem;
+
+    div{
+      height: 100%;
+      margin: 0 auto;
+      border-radius: .2rem;
+      background-color: rgba(183, 184, 185, 0.32);
+      box-sizing: border-box;
+      padding: 0 .1rem;
+      text-align: center;
+
+      span:nth-child(1){
+        display: inline-block;
+        width: .18rem;
+        margin-right: .1rem;
+        vertical-align: middle;
+        font-size: 0;
+
+        img{
+          overflow: hidden;
+          width: 100%;
+        }
+      }
+      span:nth-child(2){
+        display: inline-block;
+        line-height: .35rem;
+        color: #999999;
+        font-size: .12rem;
+        vertical-align: middle;
+      }
+    };
+  }
+
+  .superstar{
+    margin-top: .1rem;
+    padding: 0;
+    overflow: hidden;
+
+    .starTitle{
+      text-align: center;
+      margin: .1rem auto .15rem auto;
+      overflow: hidden;
+
+      p{
+        display: inline-block;
+        vertical-align: middle;
+        width: .5rem;
+        height: 0.01rem;
+        background-color: #4a4945;
+      }
+
+      h3{
+        display: inline-block;
+        font-size: .16rem;
+        margin: 0 .1rem;
+        vertical-align: middle;
+        line-height: .22rem;
+        color: #4A4945;
+      }
+    }
+
+    .starList{
+      padding: 0;
+      margin: 0 auto .5rem;
+      overflow-y: hidden;
+      overflow-x: auto;
+      zoom: 1;
+      height: 1.3rem;
+
+      ul{
+        display: flex;
+        height: 100%;
+        &:first-child{
+          margin-left: .15rem;
+        }
+
+        li{
+          box-sizing: border-box;
+          width: .96rem;
+          height: 1.2rem;
+          margin-right: .08rem;
+          vertical-align: middle;
+          border: 0.01rem solid #e7e2e5;
+          border-radius: 0.04rem;
+
+          div{
+            width: .6rem;
+            height: .6rem;
+            border-radius: 50%;
+            margin: 0.09rem 0.17rem;
+
+            img{
+              border-radius: 50%;
+              width: 100%;
+              height: 100%;
+              box-sizing: border-box;
+              border: 1px solid #E7E2E5;
+            }
+          }
+
+          h4{
+            font-size: .13rem;
+            font-weight: bold;
+            color: #4A4945;
+            line-height: .18rem;
+            margin: 0 .1rem;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+
+          p{
+            line-height: .18rem;
+            color: #999999;
+            font-size: .12rem;
+            margin-top: .02rem;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+
+        }
+      }
+    }
+  }
+
+}
+
+
 .footerContainer {
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom:0;
   z-index: 999;
   width: 100%;
   height: 0.5rem;
