@@ -22,7 +22,7 @@ class Tab extends React.Component{
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/profile">
+                    <NavLink to="/university">
                         <i className="iconfont icon-dianshi"></i>
                         大学
                     </NavLink>
