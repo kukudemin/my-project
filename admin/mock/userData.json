@@ -109,6 +109,21 @@
               "explain":"加入蛋黄并搅拌均匀"
             }
           ],
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "tips":["1、使用烤箱为东菱DL-K33B，温度时间设置仅供参考，请按照自家烤箱实际适当调整；","2、夹馅用的酸奶要选用浓稠型的，也可以将酸奶换成打发的奶油。"],
           "comment":{
             "count":2,
@@ -229,6 +244,21 @@
               "explain":"加入蛋黄并搅拌均匀"
             }
           ],
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "tips":["1、使用烤箱为东菱DL-K33B，温度时间设置仅供参考，请按照自家烤箱实际适当调整；","2、夹馅用的酸奶要选用浓稠型的，也可以将酸奶换成打发的奶油。"],
           "comment":{
             "count":2,
@@ -255,6 +285,21 @@
           "introduce":"前一段时间坊间流传的网红脏脏包、脏脏卷，感觉热量太高了，一直没敢尝试，可这诱惑一直存于心中无法忘怀。今天做了一个巧克力味的夹心蛋糕，香浓的巧克力蛋糕中夹入了浓稠的老北京风味酸奶，加上一些新鲜的草莓，香甜而不腻，非常好吃。表面再洒上一层厚厚的巧克力粉，这会是传说中的网红脏脏夹心蛋糕吗？如此健康美味且简单易做，值得一试。",
           "Views":5902,
           "like":66,
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "ingredient":[
             {"鸡蛋":"3个"},
             {"牛奶":"45克"},
@@ -519,6 +564,21 @@
           "introduce":"感谢东菱提供的k33B烤箱和4706面包。这款小面包组织松软，用的是戚风模具，配方的量可以做2个8寸的戚风模具，面团分割每个24克左右，分割20份，如果做不了这么多，可以把配方减半，那就是一个8寸模具的量。",
           "Views":2658,
           "like":21,
+          "remindPoint":{
+          "count":2,
+          "data":[
+            {
+              "clientName":"那年花开",
+              "remindTime":"2017-12-20 16:03:47",
+              "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+            },
+            {
+              "clientName":"小鱼",
+              "remindTime":"2018-02-24 14:03:47",
+              "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+            }
+          ]
+        },
           "comment":{
             "count":2,
             "data":[
@@ -638,6 +698,21 @@
           "introduce":"感谢东菱提供的k33B烤箱和4706面包。这款小面包组织松软，用的是戚风模具，配方的量可以做2个8寸的戚风模具，面团分割每个24克左右，分割20份，如果做不了这么多，可以把配方减半，那就是一个8寸模具的量。",
           "Views":2658,
           "like":21,
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "comment":{
             "count":2,
             "data":[
@@ -757,6 +832,21 @@
           "introduce":"感谢东菱提供的k33B烤箱和4706面包。这款小面包组织松软，用的是戚风模具，配方的量可以做2个8寸的戚风模具，面团分割每个24克左右，分割20份，如果做不了这么多，可以把配方减半，那就是一个8寸模具的量。",
           "Views":2658,
           "like":21,
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "comment":{
             "count":2,
             "data":[
@@ -926,6 +1016,21 @@
             }
           ],
           "title":"奥利奥咸奶油抹茶奶酪蛋糕卷",
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "introduce":"喜欢奥利奥咸奶油的味道，吃起来不会腻。再加上清新的抹茶味道棒棒哒！",
           "Views":1982,
           "like":13,
@@ -1048,6 +1153,21 @@
           "introduce":"喜欢奥利奥咸奶油的味道，吃起来不会腻。再加上清新的抹茶味道棒棒哒！",
           "Views":1982,
           "like":13,
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "comment":{
             "count":2,
             "data":[
@@ -1167,6 +1287,21 @@
           "introduce":"喜欢奥利奥咸奶油的味道，吃起来不会腻。再加上清新的抹茶味道棒棒哒！",
           "Views":1982,
           "like":13,
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "comment":{
             "count":2,
             "data":[
@@ -1244,6 +1379,21 @@
           "introduce":"前一段时间坊间流传的网红脏脏包、脏脏卷，感觉热量太高了，一直没敢尝试，可这诱惑一直存于心中无法忘怀。今天做了一个巧克力味的夹心蛋糕，香浓的巧克力蛋糕中夹入了浓稠的老北京风味酸奶，加上一些新鲜的草莓，香甜而不腻，非常好吃。表面再洒上一层厚厚的巧克力粉，这会是传说中的网红脏脏夹心蛋糕吗？如此健康美味且简单易做，值得一试。",
           "Views":5902,
           "like":66,
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "comment":{
             "count":2,
             "data":[
@@ -1364,6 +1514,21 @@
           "introduce":"前一段时间坊间流传的网红脏脏包、脏脏卷，感觉热量太高了，一直没敢尝试，可这诱惑一直存于心中无法忘怀。今天做了一个巧克力味的夹心蛋糕，香浓的巧克力蛋糕中夹入了浓稠的老北京风味酸奶，加上一些新鲜的草莓，香甜而不腻，非常好吃。表面再洒上一层厚厚的巧克力粉，这会是传说中的网红脏脏夹心蛋糕吗？如此健康美味且简单易做，值得一试。",
           "Views":5902,
           "like":66,
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "comment":{
             "count":2,
             "data":[
@@ -1484,6 +1649,21 @@
           "introduce":"前一段时间坊间流传的网红脏脏包、脏脏卷，感觉热量太高了，一直没敢尝试，可这诱惑一直存于心中无法忘怀。今天做了一个巧克力味的夹心蛋糕，香浓的巧克力蛋糕中夹入了浓稠的老北京风味酸奶，加上一些新鲜的草莓，香甜而不腻，非常好吃。表面再洒上一层厚厚的巧克力粉，这会是传说中的网红脏脏夹心蛋糕吗？如此健康美味且简单易做，值得一试。",
           "Views":5902,
           "like":66,
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "comment":{
             "count":2,
             "data":[
@@ -1745,6 +1925,21 @@
             }
           ],
           "title":"花朵面包-东菱烤箱k33B食谱",
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "introduce":"感谢东菱提供的k33B烤箱和4706面包。这款小面包组织松软，用的是戚风模具，配方的量可以做2个8寸的戚风模具，面团分割每个24克左右，分割20份，如果做不了这么多，可以把配方减半，那就是一个8寸模具的量。",
           "Views":2658,
           "like":21,
@@ -1863,6 +2058,21 @@
               "explain":"加入蛋黄并搅拌均匀"
             }
           ],
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "title":"花朵面包-东菱烤箱k33B食谱",
           "introduce":"感谢东菱提供的k33B烤箱和4706面包。这款小面包组织松软，用的是戚风模具，配方的量可以做2个8寸的戚风模具，面团分割每个24克左右，分割20份，如果做不了这么多，可以把配方减半，那就是一个8寸模具的量。",
           "Views":2658,
@@ -1986,6 +2196,21 @@
           "introduce":"感谢东菱提供的k33B烤箱和4706面包。这款小面包组织松软，用的是戚风模具，配方的量可以做2个8寸的戚风模具，面团分割每个24克左右，分割20份，如果做不了这么多，可以把配方减半，那就是一个8寸模具的量。",
           "Views":2658,
           "like":21,
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "comment":{
             "count":2,
             "data":[
@@ -2154,6 +2379,21 @@
               "explain":"加入蛋黄并搅拌均匀"
             }
           ],
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "title":"奥利奥咸奶油抹茶奶酪蛋糕卷",
           "introduce":"喜欢奥利奥咸奶油的味道，吃起来不会腻。再加上清新的抹茶味道棒棒哒！",
           "Views":1982,
@@ -2273,6 +2513,21 @@
               "explain":"加入蛋黄并搅拌均匀"
             }
           ],
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "title":"奥利奥咸奶油抹茶奶酪蛋糕卷",
           "introduce":"喜欢奥利奥咸奶油的味道，吃起来不会腻。再加上清新的抹茶味道棒棒哒！",
           "Views":1982,
@@ -2409,6 +2664,21 @@
               "explain":"加入蛋黄并搅拌均匀"
             }
           ],
+          "remindPoint":{
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "title":"奥利奥咸奶油抹茶奶酪蛋糕卷",
           "introduce":"喜欢奥利奥咸奶油的味道，吃起来不会腻。再加上清新的抹茶味道棒棒哒！",
           "Views":1982,
