@@ -6,6 +6,7 @@ import Recipe from "../../component/recipe/Recipe"
 import  DetailTab from "../../component/recipe/DetailTab"
 import "./RecipeDetail.less"
 import RecomendItem from "../../component/recipe/RecomendItem"
+
 import NewWorks from "./NewWorks";
 import MasterList from "./MasterList";
 import AttentionList from "./AttentionList";
@@ -16,7 +17,7 @@ class RecipeDetail extends React.Component{
     }
     render(){
         return (
-            <div>
+            <div className='RecipeDetail'>
                 <section className='detail-header'>
                     <span className='icon-fanhui'>
                         <img src={require('../../common/image/icon-fanhui.png')} alt=""/></span>

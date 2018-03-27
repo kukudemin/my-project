@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {connect} from "react-redux"
+import {withRouter,Link,NavLink,Route,Switch} from "react-router-dom"
+import "./CookDetail.less"
 
 class CookDetail extends React.Component{
     constructor(){
@@ -9,8 +11,16 @@ class CookDetail extends React.Component{
 
     render(){
         return (
-            <div>CookDetail</div>
+            <div className='cookDetail'>
+                <section className='detail-header'>
+                    <span className='icon-fanhui'>
+                        <img src={require('../../common/image/icon-fanhui.png')} alt=""/></span>
+
+                    <span className='title'>戚风蛋糕...</span>
+                    <span className='collect'>收藏</span>
+                </section>
+            </div>
         )
     }
 }
-export default connect()(CookDetail)
+export default withRouter(connect()(CookDetail))
