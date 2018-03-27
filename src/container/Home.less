@@ -28,7 +28,7 @@
       font-size: .18rem;
       font-weight: bold;
     }
-    span:nth-child(3) {
+    a{
       width: .25rem;
       height: .25rem;
 
@@ -82,95 +82,189 @@
     margin-top: .1rem;
     padding: 0;
     overflow: hidden;
+    background-color: #DDDDDD;
+    .star-BG{
+      background-color: #fff;
 
-    .starTitle{
-      text-align: center;
-      margin: .1rem auto .15rem auto;
-      overflow: hidden;
+      .starTitle{
+        text-align: center;
+        margin: .1rem auto .15rem auto;
+        overflow: hidden;
 
-      p{
-        display: inline-block;
-        vertical-align: middle;
-        width: .5rem;
-        height: 0.01rem;
-        background-color: #4a4945;
+        p{
+          display: inline-block;
+          vertical-align: middle;
+          width: .5rem;
+          height: 0.01rem;
+          background-color: #4a4945;
+        }
+
+        h3{
+          display: inline-block;
+          font-size: .16rem;
+          margin: 0 .1rem;
+          vertical-align: middle;
+          line-height: .22rem;
+          color: #4A4945;
+        }
       }
+      .starList{
+        padding: 0;
+        margin: 0 auto .1rem ;
+        overflow-y: hidden;
+        overflow-x: auto;
+        zoom: 1;
+        height: 1.3rem;
 
-      h3{
-        display: inline-block;
-        font-size: .16rem;
-        margin: 0 .1rem;
-        vertical-align: middle;
-        line-height: .22rem;
-        color: #4A4945;
+        ul{
+          display: flex;
+          height: 100%;
+          &:first-child{
+            margin-left: .15rem;
+          }
+
+          li{
+            box-sizing: border-box;
+            width: .96rem;
+            height: 1.2rem;
+            margin-right: .08rem;
+            vertical-align: middle;
+            border: 0.01rem solid #e7e2e5;
+            border-radius: 0.04rem;
+
+            div{
+              width: .6rem;
+              height: .6rem;
+              border-radius: 50%;
+              margin: 0.09rem 0.17rem;
+
+              img{
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                border: 1px solid #E7E2E5;
+              }
+            }
+
+            h4{
+              font-size: .13rem;
+              font-weight: bold;
+              color: #4A4945;
+              line-height: .18rem;
+              margin: 0 .1rem;
+              text-align: center;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+
+            p{
+              line-height: .18rem;
+              color: #999999;
+              font-size: .12rem;
+              margin-top: .02rem;
+              text-align: center;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+
+          }
+        }
       }
     }
 
-    .starList{
-      padding: 0;
-      margin: 0 auto .5rem;
-      overflow-y: hidden;
-      overflow-x: auto;
-      zoom: 1;
-      height: 1.3rem;
+  }
 
-      ul{
-        display: flex;
-        height: 100%;
-        &:first-child{
-          margin-left: .15rem;
+  .HomeList{
+    background-color: #DDDDDD;
+    margin-top: .1rem;
+    margin-bottom: .5rem;
+
+    .list-Item{
+      margin-top: .1rem;
+      margin-bottom: .1rem;
+      position: relative;
+      overflow: hidden;
+      zoom: 1;
+      background-color: #FFFFFF;
+      padding: .15rem;
+      box-sizing: border-box;
+      text-align: center;
+
+      .list-Img{
+        border-radius: .04rem;
+        border: 1px solid #E7E2E5;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        img{
+          width: 2.88rem;
+          height: 1.67rem;
+        }
+      }
+
+      .list-icon{
+        overflow: hidden;
+        margin-top: .15rem;
+        text-align: center;
+
+        .icon-top{
+          width: .4rem;
+          height: .4rem;
+          margin: 0 auto;
+          border-radius: 50%;
+
+          img{
+            width: .38rem;
+            height: .38rem;
+            border-radius: 50%;
+            overflow: hidden;
+            box-sizing: border-box;
+            border: 1px solid #E7E2E5;
+
+          }
         }
 
-        li{
-          box-sizing: border-box;
-          width: .96rem;
-          height: 1.2rem;
-          margin-right: .08rem;
-          vertical-align: middle;
-          border: 0.01rem solid #e7e2e5;
-          border-radius: 0.04rem;
+        .icon-bottom{
+          display: inline-block;
 
-          div{
-            width: .6rem;
-            height: .6rem;
-            border-radius: 50%;
-            margin: 0.09rem 0.17rem;
 
-            img{
-              border-radius: 50%;
-              width: 100%;
-              height: 100%;
-              box-sizing: border-box;
-              border: 1px solid #E7E2E5;
-            }
+          img{
+            width: .4rem;
+            height: .4rem;
+            vertical-align: middle;
           }
+        }
 
-          h4{
-            font-size: .13rem;
-            font-weight: bold;
-            color: #4A4945;
-            line-height: .18rem;
-            margin: 0 .1rem;
-            text-align: center;
-            overflow: hidden;
-            white-space: nowrap;
-          }
 
-          p{
-            line-height: .18rem;
-            color: #999999;
-            font-size: .12rem;
-            margin-top: .02rem;
-            text-align: center;
-            overflow: hidden;
-            white-space: nowrap;
-          }
+      }
 
+      .list-text{
+        text-align: center;
+        h2{
+          font-size: .18rem;
+          font-weight: bold;
+          color: #4A4945;
+          line-height: .25rem;
+          margin: 0 auto;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        p{
+          font-size: .14rem;
+          color: #999999;
+          line-height: .2rem;
+          margin: .1rem .15rem 0 .15rem;
+          max-height: .6rem;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          text-indent: 2em;
         }
       }
     }
   }
-
 }
 
 

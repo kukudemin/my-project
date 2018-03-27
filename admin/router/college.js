@@ -9,14 +9,19 @@ route.use(async function (req,res,next) {
 route.get('/list',(req,res)=>{
     res.send(req.resolve);
 });
-route.get('/detail',(req,res)=>{
+/*route.get('/detail',(req,res)=>{
     let {id,num}=req.query;
-    req.resolve.find((item)=>{
+    let data=req.resolve.find((item)=>{
         return item.id==id;
     }).course.find((item)=>{
         return item.num==num;
-    })
-    res.send(req.resolve);
+    });
+    res.send(data);
+});*/
+route.get('/detail',async (req,res)=>{
+    let {id,num}=req.query;
+    let data=await utils.aryFind(req.resolve,id,num,"course");
+    res.send(data);
 });
 
 module.exports=route;

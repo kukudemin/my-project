@@ -14,6 +14,7 @@ import Pay from "./container/university/Pay";
 
 
 import Profile from "./container/Profile";
+import BZvideo from "./component/BZvideo"
 import "./common/css/reset.min.css"
 import "./common/css/public.less"
 import Series from "./container/university/Series";
@@ -22,6 +23,7 @@ import CourseDetail from "./container/university/CourseDetail";
 
 import CookDetail from "./container/myCircle/CookDetail";
 import RecipeDetail from "./container/myCircle/RecipeDetail";
+import Information from "./component/Information";
 
 
 
@@ -43,6 +45,8 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/courseDetail' component={CourseDetail}/>
                 <Route path='/profile' component={Profile}/>
                 <Route path='/newHand' component={NewHand}/>
+                <Route path='/video' component={BZvideo}/>
+                <Route path='/information' component={Information}/>
                 <Redirect to="/"/>
             </Switch>
         </HashRouter>
