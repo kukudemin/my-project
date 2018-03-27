@@ -18,5 +18,6 @@ app.use(function (req,res,next) {
 });
 app.use(bodyParse.urlencoded({extended:false}));
 app.use('/home',require("./router/home"));
+app.use('/college',require("./router/college"));
 
 

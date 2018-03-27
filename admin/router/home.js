@@ -9,9 +9,24 @@ route.get('/banner',(req,res)=>{
         console.log(err);
     })
 });
+route.get('/allStar',async function (req,res) {
+    let data=await utils.readJSON("starAll.json");
+    res.send(data);
+});
 route.get('/star',async function (req,res) {
     let data=await utils.readJSON("cookbook.json");
-   res.send(data);
+    res.send(data);
+});
+route.get('/recipe',async function (req,res) {
+    let {id,dishNum}=req.query;
+    let data=await utils.readJSON("userData.json");
+    console.log(data);
+    let resolute=data.persons.find((item)=>{
+        return item.id==id;
+    }).allDish.find((item)=>{
+        return item.num==dishNum;
+    });
+    res.send(resolute);
 });
 
 module.exports=route;
