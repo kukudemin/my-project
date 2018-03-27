@@ -8,8 +8,8 @@ class NewHand extends React.Component{
     render(){
         return <div>
             <div className="header">
-                <span><img src={require("../common/image/返回.png")} alt=""/></span>
-                <span>收藏</span>
+                <span className="goBack"><img src={require("../common/image/返回.png")} alt=""/></span>
+                <span className="collection">收藏</span>
             </div>
             <div className="into">
                 <div>新手入门</div>

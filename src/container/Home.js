@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import "./Home.less"
 import {queryBanner,getStar} from "../api/home";
 class Home extends React.Component{
+
     constructor(){
         super();
         this.state={
@@ -22,11 +23,14 @@ class Home extends React.Component{
         let data=await getStar();
         this.setState({
             data
-        })
-        console.log(data);
+        });
+        console.log(data)
     }
     render(){
-
+        let data=this.state.data;
+        if (data.length === 0) {
+            return null;
+        }
         return <div>
             <section className="navContainer">
                 <div className="header">
@@ -54,7 +58,15 @@ class Home extends React.Component{
                     </div>
                     <div className="starList">
                         <ul>
-                            <li></li>
+                            {
+                                data.map((item,index)=>{
+                                    return <li key={index}>
+                                        <div><img src={item.clientImage} alt=""/></div>
+                                        <h4>{item.clientName}</h4>
+                                        <p>{item.clientId}食谱</p>
+                                    </li>
+                                })
+                            }
                         </ul>
                     </div>
                 </div>
