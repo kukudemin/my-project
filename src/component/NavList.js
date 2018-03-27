@@ -19,7 +19,6 @@ class NavList extends React.Component{
         if (data.length === 0) {
             return null;
         }
-        console.log(data);
         let ary=["/recipes","/newHand","/video","/radio","/recipes","/newHand","/video","/radio"];
         return <div className="navList">
             {
