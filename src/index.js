@@ -11,6 +11,8 @@ import University from "./container/University";
 
 import "./common/css/reset.min.css"
 import "./common/css/public.less"
+import CookDetail from "./container/myCircle/CookDetail";
+import RecipeDetail from "./container/myCircle/RecipeDetail";
 
 
 ReactDOM.render(<Provider store={store}>
@@ -18,7 +20,9 @@ ReactDOM.render(<Provider store={store}>
             <Switch>
                 <Route path='/' exact component={Home}/>
                 <Route path='/circle' component={myCircle}/>
-               <Route path='/register' component={Register}/>
+                <Route path='/cookDetail' component={CookDetail}/>
+                <Route path='/recipeDetail' component={RecipeDetail}/>
+                <Route path='/register' component={Register}/>
                 <Route path='/university' component={University}/>
                 <Redirect to="/"/>
             </Switch>

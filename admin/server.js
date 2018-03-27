@@ -19,3 +19,4 @@ app.use(function (req,res,next) {
 app.use(bodyParse.urlencoded({extended:false}));
 app.use('/home',require("./router/home"));
 
+
