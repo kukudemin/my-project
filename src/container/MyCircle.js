@@ -19,12 +19,12 @@ class myCircle extends React.Component{
                 <section className='myCircleNav'>
                     <div className='nav'>
                         <NavLink to='/circle/attention' activeClassName='activeMy'>关注</NavLink>
-                        <NavLink to='/circle/new' activeClassName='activeMy' >最新</NavLink>
+                        <NavLink to='/circle' exact activeClassName='activeMy' >最新</NavLink>
                         <NavLink to='/circle/Master' activeClassName='activeMy'>达人</NavLink>
                     </div>
                     <div className="header">
-                        <span><img src={require("../common/image/加号.png")} alt=""/></span>
-                        <span><img src={require("../common/image/闹铃.png")} alt=""/></span>
+                        <i className='left'><img src={require("../common/image/加号.png")} alt=""/></i>
+                        <i className='right'><img src={require("../common/image/闹铃.png")} alt=""/></i>
                     </div>
                 </section>
 
@@ -33,7 +33,6 @@ class myCircle extends React.Component{
                     <Switch>
                         <Route from="/circle" exact  component={NewWorks}/>
                         <Route path="/circle/attention" component={AttentionList}/>
-                        <Route path="/circle/new" component={NewWorks}/>
                         <Route path="/circle/master" component={MasterList}/>
                     </Switch>
                 </section>

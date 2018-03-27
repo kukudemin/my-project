@@ -1,11 +1,12 @@
 .recipe-item{
   width: 100%;
   background-color: #fff;
- margin: .16rem 0;
+  margin: .16rem 0;
   .infoHeader{
     padding: .1rem .15rem;
     overflow: hidden;
     position: relative;
+
     .infoLeft{
       display: block;
       width: .38rem;
@@ -33,6 +34,13 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         font-weight: bold;
+        vertical-align: top;
+        .masterIcon{
+          display: inline-block;
+          height: 100%;
+          vertical-align: top;
+          margin-right: .14rem;
+        }
       }
       .text{
         text-align: left;
@@ -45,18 +53,30 @@
 
       }
     }
-
+  .dec1{
+    margin: 0 .15rem .1rem  .15rem;
+    color: #999999;
+    .mark{
+      color: #498DD0;
+      padding-right: .14rem;
+    }
+  }
   .imgList{
     position: relative;
-    margin: 0 .11rem;
+    margin: 0 .15rem;
     overflow: hidden;
     padding: 0 0 .1rem 0;
+    display: flex;
+    justify-items: center;
+    align-content: space-between;
+    justify-content:space-between;
+    flex-wrap: wrap;
+
     div{
       display: inline-block;
-      width: 33.333%;
+      width: 32%;
       font-size: 0;
-      padding: .04rem;
-      margin: 0;
+      margin-bottom: .05rem;
       overflow: hidden;
       box-sizing: border-box;
 
@@ -76,31 +96,86 @@
     margin: 0 .11rem;
     box-sizing: border-box;
     li{
-      text-align:center;
-      flex: 1;
-      height: .20rem;
-      line-height: .20rem;
-      margin-top: .04rem;
-      box-sizing: border-box;
-      border-right: .01rem solid;
-      border-right-color: #E7E2E5;
-      div{
+    text-align:center;
+    flex: 1;
+    height: .20rem;
+    line-height: .20rem;
+    margin-top: .04rem;
+    box-sizing: border-box;
+    border-right: .01rem solid #E7E2E5;
+    div{
+      display: inline-block;
+      vertical-align: top;
+      img{
         display: inline-block;
-        vertical-align: top;
-        img{
-          display: inline-block;
-          width: .2rem;
-          height: .2rem;
-        }
+        width: .2rem;
+        height: .2rem;
       }
-      span{
-        font-size: .12rem;
-        color: #999999;
-        margin-left: .1rem;
-        vertical-align: top;
-        line-height: .2rem;
-      }
+    }
+    span{
+      font-size: .12rem;
+      color: #999999;
+      margin-left: .1rem;
+      vertical-align: top;
+      line-height: .2rem;
+    }
 
+  }
+  }
+  .infoFooter1{
+    display: flex;
+    justify-self: center;
+    margin: 0 .11rem;
+    position: relative;
+    padding: 0 0.02rem .1rem 0.02rem;
+    .footerTitle{
+      display: inline-block;
+      width: 2rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: .16rem;
+      font-weight: bold;
+      color: #4A4945;
+    }
+    .footerSearch{
+      font-size: .14rem;
+      color: #999999;
+      position: absolute;
+      right: 0;
+
+    }
+  }
+}
+.cook-item{
+
+  .coverImg{
+    position: relative;
+    margin: 0 .15rem;
+    overflow: hidden;
+    .cover{
+      width: 2.9rem;
+      box-sizing: border-box;
+      img{
+        background: none;
+        width: 100%;
+        border-radius: .02rem;
+      }
+    }
+  }
+  .dec{
+    padding: 0.1rem .15rem;
+    color: #999999;
+    .content{
+      font-size: .18rem;
+      font-weight: bold;
+      color: #4A4945;
+      line-height: .25rem;
+      margin-bottom: .1rem;
+    }
+    .mark{
+      color: #498DD0;
+      padding-right: .14rem;
     }
   }
 }
