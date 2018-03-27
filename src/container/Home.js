@@ -1,6 +1,7 @@
 import React from "react"
 import Tab from "../component/Tab"
 import Banner from "../component/Banner"
+import NavList from "../component/NavList"
 import {connect} from 'react-redux';
 import "./Home.less"
 import {queryBanner} from "../api/home";
@@ -8,7 +9,7 @@ class Home extends React.Component{
     constructor(){
         super();
         this.state={
-            bannerData:[]
+            bannerData:{}
         }
     }
 
@@ -16,9 +17,10 @@ class Home extends React.Component{
         let result=await queryBanner();
         this.setState({
             bannerData:result
-        })
+        });
     }
     render(){
+
         return <div>
             <section className="navContainer">
                 <div className="header">
@@ -28,7 +30,16 @@ class Home extends React.Component{
                 </div>
             </section>
             <section className="container">
-                <Banner data={this.state.bannerData} auto={2000}/>
+                <Banner data={this.state.bannerData.banner1} auto={2000}/>
+                <div className="search">
+                    <div>
+                        <span><img src={require("../common/image/放大镜.png")} alt=""/></span>
+                        <span>搜索食谱、材料、达人</span>
+                    </div>
+                </div>
+                <nav>
+                   <NavList data={this.state.bannerData.nav}/>
+                </nav>
             </section>
             <section className="footerContainer">
                 <Tab/>

@@ -42,7 +42,7 @@ class Banner extends React.Component{
                 }
             }}>
                 {
-                    data.banner1.map((item,index)=>{
+                    data.map((item,index)=>{
                         return <div key={index}>
                             <img src={item.img} alt=""/>
                         </div>
@@ -52,7 +52,7 @@ class Banner extends React.Component{
             {
                 isFocus?<ul className="focus">
                     {
-                        data.banner1.map((item,index)=>{
+                        data.map((item,index)=>{
                             return <li key={index} className={index===this.state.step?"active":null}>
 
                             </li>
