@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {connect} from "react-redux"
+import Recipe from "../../component/recipe/Recipe"
+import CookBook from "../../component/recipe/CookBook"
 
 class AttentionList extends React.Component{
     constructor(){
@@ -9,7 +11,9 @@ class AttentionList extends React.Component{
 
     render(){
         return (
-            <div>AttentionList</div>
+            <div>
+                <CookBook/>
+            </div>
         )
     }
 }

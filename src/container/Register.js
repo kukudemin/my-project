@@ -5,6 +5,8 @@ import React, {Component} from 'react';
 
 import "./Register.less"
 import fetch from 'isomorphic-fetch';
+import {Link} from 'react-router-dom';
+import {register} from '../api/profile';
 
 class Register extends Component {
     constructor(props) {
@@ -47,27 +49,42 @@ class Register extends Component {
         let {username, password} = this.state;
         return (
          <div className="register">
-             <div className="register-s7e1f0f36"></div>
+             <div className="register-empty"></div>
              <div className="register-header">
                  <img className="register-img" src="https://image.hongbeibang.com/FvbI_v3ce7nuHZq3Cq5yd37BvjuG?94X94&imageView2/1/w/50/h/50" alt=""/>
-                 <ul className="register-login">登录</ul>
+                 <span className="register-login">登录</span>
              </div>
-             <div className="register-s-505debda">
+             <div className="register-img-s">
                  <img className="register-s-34f4f4a1" src="https://image.hongbeibang.com/FkycjRlqWYQkgF7gDYEsq1ViZiVW?750X440&imageView2/1/w/510/h/299" alt=""/>
              </div>
-             <div className="register-s-5566e7c3">烘焙帮超有爱</div>
-             <div className="register-s747151b9">
-                 <div className="register-s-488bd9c1">
-                     <img className="register-s-34f4f4a1" src="" alt=""/>
-                     <div className="register-s6cdc22ab">微信登录</div>
-                 </div>
-                 <div className="register-s-24e0dc36">
-                     <span>帮友们，抽空看看我们的</span>
-                     <span style={{color:"#1976D2",textDecoration:"underline"}}>服务条款</span>
-                     <span>呗</span>
-                 </div>
+             <div className="register-bake">烘焙帮超有爱</div>
+            <div className="register-int">
+                <input type="text" placeholder='用户名' ref='userNameInp'/>
+                <br/><br/>
+                <input type="password" placeholder='密码' ref='userPassInp'/>
+                <br/><br/>
+            </div>
+             <div className="register-sp">
+                 <span>帮友们，抽空看看我们的</span>
+                 <span style={{color:"#1976D2",textDecoration:"underline"}}>服务条款</span>
+                 <span>呗</span>
              </div>
-             <div className="register-s-51e4d797">其他登录方式</div>
+             <button className="register-btn" onClick={ev => {
+                 let {userNameInp, userPassInp} = this.refs,
+                     userName = userNameInp.value,
+                     userPass = userPassInp.value;
+                 register(userName, userPass).then(result => {
+                     if (result !== 'success') {
+                         alert('注册失败!');
+                         return;
+                     }
+                     this.props.history.push('/profile');
+                 });
+             }}>
+                 立即注册
+             </button>
+             <br/><br/>
+             <Link to="/login" >已经注册，立即登录!</Link>
          </div>
 
         );
