@@ -11,15 +11,18 @@ import University from "./container/University";
 
 import "./common/css/reset.min.css"
 import "./common/css/public.less"
+import NewHand from "./component/NewHand";
 
 
 ReactDOM.render(<Provider store={store}>
         <HashRouter>
             <Switch>
                 <Route path='/' exact component={Home}/>
+                <Route path='/home' component={Home}/>
                 <Route path='/circle' component={myCircle}/>
                 <Route path='/register' component={Register}/>
                 <Route path='/university' component={University}/>
+                <Route path='/newHand' component={NewHand}/>
                 <Redirect to="/"/>
             </Switch>
         </HashRouter>

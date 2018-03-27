@@ -4,12 +4,13 @@ import Banner from "../component/Banner"
 import NavList from "../component/NavList"
 import {connect} from 'react-redux';
 import "./Home.less"
-import {queryBanner} from "../api/home";
+import {queryBanner,getStar} from "../api/home";
 class Home extends React.Component{
     constructor(){
         super();
         this.state={
-            bannerData:{}
+            bannerData:{},
+            data:[]
         }
     }
 
@@ -18,6 +19,11 @@ class Home extends React.Component{
         this.setState({
             bannerData:result
         });
+        let data=await getStar();
+        this.setState({
+            data
+        })
+        console.log(data);
     }
     render(){
 

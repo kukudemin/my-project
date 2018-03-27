@@ -20,15 +20,16 @@ class NavList extends React.Component{
             return null;
         }
         console.log(data);
+        let ary=["/recipes","/newHand","/video","/radio","/recipes","/newHand","/video","/radio"];
         return <div className="navList">
             {
                 data.map((item,index)=>{
-                    return <div key={index} className="listItem">
-                        <div className="item" to="">
+                    return <Link to={ary[index]} key={index} className="listItem">
+                        <div className="item" >
                             <img src={item.image} alt=""/>
                         </div>
                         <p>{item.title}</p>
-                    </div>
+                    </Link>
                 })
             }
         </div>
