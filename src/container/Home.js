@@ -40,6 +40,18 @@ class Home extends React.Component{
                 <nav>
                    <NavList data={this.state.bannerData.nav}/>
                 </nav>
+                <div className="superstar">
+                    <div className="starTitle">
+                        <p></p>
+                        <h3>明星达人</h3>
+                        <p></p>
+                    </div>
+                    <div className="starList">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             <section className="footerContainer">
                 <Tab/>
