@@ -20,12 +20,12 @@ route.get('/star',async function (req,res) {
 route.get('/recipe',async function (req,res) {
     let {id,dishNum}=req.query;
     let data=await utils.readJSON("userData.json");
-    console.log(data);
-    let resolute=data.persons.find((item)=>{
+  /*  let resolute=data.persons.find((item)=>{
         return item.id==id;
     }).allDish.find((item)=>{
         return item.num==dishNum;
-    });
+    });*/
+    let resolute= await utils.aryFind(data.persons,id,dishNum,"allDish");
     res.send(resolute);
 });
 

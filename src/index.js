@@ -8,10 +8,17 @@ import NewHand from "./component/NewHand";
 import Home from "./container/Home";
 import Register from "./container/Register";
 import University from "./container/University";
+
+import Pay from "./container/university/Pay";
+
+
+
 import Profile from "./container/Profile";
 import BZvideo from "./component/BZvideo"
 import "./common/css/reset.min.css"
 import "./common/css/public.less"
+import Series from "./container/university/Series";
+import CourseDetail from "./container/university/CourseDetail";
 
 
 import CookDetail from "./container/myCircle/CookDetail";
@@ -33,6 +40,9 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/recipeDetail' component={RecipeDetail}/>
                 <Route path='/register' component={Register}/>
                 <Route path='/university' component={University}/>
+                <Route path='/pay' component={Pay}/>
+                <Route path='/series' component={Series}/>
+                <Route path='/courseDetail' component={CourseDetail}/>
                 <Route path='/profile' component={Profile}/>
                 <Route path='/newHand' component={NewHand}/>
                 <Route path='/video' component={BZvideo}/>
