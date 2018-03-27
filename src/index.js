@@ -4,6 +4,7 @@ import {HashRouter,Switch,Route,Redirect} from "react-router-dom"
 import {Provider} from "react-redux";
 import store from "./store"
 import myCircle from "./container/MyCircle";
+import NewHand from "./component/NewHand";
 import Home from "./container/Home";
 import Register from "./container/Register";
 import University from "./container/University";
@@ -11,7 +12,7 @@ import University from "./container/University";
 
 import "./common/css/reset.min.css"
 import "./common/css/public.less"
-import NewHand from "./component/NewHand";
+
 
 
 ReactDOM.render(<Provider store={store}>
