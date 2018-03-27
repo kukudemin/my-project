@@ -7,8 +7,7 @@ import myCircle from "./container/MyCircle";
 import Home from "./container/Home";
 import Register from "./container/Register";
 import University from "./container/University";
-
-
+import Profile from "./container/Profile";
 import "./common/css/reset.min.css"
 import "./common/css/public.less"
 
@@ -20,6 +19,7 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/circle' component={myCircle}/>
                 <Route path='/register' component={Register}/>
                 <Route path='/university' component={University}/>
+                <Route path='/profile' component={Profile}/>
                 <Redirect to="/"/>
             </Switch>
         </HashRouter>
