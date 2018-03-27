@@ -4,17 +4,29 @@ import {HashRouter,Switch,Route,Redirect} from "react-router-dom"
 import {Provider} from "react-redux";
 import store from "./store"
 import myCircle from "./container/MyCircle";
+import NewHand from "./component/NewHand";
 import Home from "./container/Home";
 import Register from "./container/Register";
 import University from "./container/University";
+
+import Pay from "./container/university/Pay";
+
+
+
 import Profile from "./container/Profile";
+import BZvideo from "./component/BZvideo"
 import "./common/css/reset.min.css"
 import "./common/css/public.less"
+import Series from "./container/university/Series";
+import CourseDetail from "./container/university/CourseDetail";
+
 
 import CookDetail from "./container/myCircle/CookDetail";
 import RecipeDetail from "./container/myCircle/RecipeDetail";
+import Information from "./component/Information";
 
-import NewHand from "./component/NewHand";
+
+
 
 
 
@@ -24,17 +36,25 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/' exact component={Home}/>
                 <Route path='/home' component={Home}/>
                 <Route path='/circle' component={myCircle}/>
-
                 <Route path='/cookDetail' component={CookDetail}/>
                 <Route path='/recipeDetail' component={RecipeDetail}/>
-
                 <Route path='/register' component={Register}/>
                 <Route path='/university' component={University}/>
+<<<<<<< HEAD
 
                 <Route path='/profile' component={Profile}/>
 
                 <Route path='/newHand' component={NewHand}/>
 
+=======
+                <Route path='/pay' component={Pay}/>
+                <Route path='/series' component={Series}/>
+                <Route path='/courseDetail' component={CourseDetail}/>
+                <Route path='/profile' component={Profile}/>
+                <Route path='/newHand' component={NewHand}/>
+                <Route path='/video' component={BZvideo}/>
+                <Route path='/information' component={Information}/>
+>>>>>>> d86990cc62ce8ace6b06167d76b0d4c3c9c9502a
                 <Redirect to="/"/>
             </Switch>
         </HashRouter>

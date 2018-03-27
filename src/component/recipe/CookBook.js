@@ -20,7 +20,7 @@ class CookBook extends React.Component{
                         </div>
                         <div className='infoRight'>
                             <p className='userName'><img  className='masterIcon' src={require("../../common/image/icon-master.png")} alt=""/>小小小鸟</p>
-                            <p className='text'>
+                            <p className='cook-text'>
                                 <span className='time'>30秒之前</span>
 
                             </p>

@@ -4,6 +4,8 @@ html,body{
 }
 .myCircle{
   width: 100%;
+  min-height:4.76rem;
+  background-color: #eee;
 
   .myCircleNav{
     z-index: 999;
@@ -17,9 +19,13 @@ html,body{
     top: 0;
     .nav{
       position: absolute;
-      left: 0;
+      left:0;
       right: 0;
+      top: 0;
       text-align: center;
+      display: inline-block;
+      width: 1.96rem;
+      margin:  0 auto;
       a{
         display: inline-block;
         width: .65rem;
@@ -40,11 +46,19 @@ html,body{
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      span{
+      .left{
+        display: inline-block;
         width: .25rem;
         height: .25rem;
-
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .right{
+        display: inline-block;
+        width: .25rem;
+        height: .25rem;
         img{
           width: 100%;
           height: 100%;
@@ -52,6 +66,7 @@ html,body{
       }
       }
     }
+
 .CircleList{
   margin-top: .44rem;
 }

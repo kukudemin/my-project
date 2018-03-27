@@ -23,8 +23,8 @@ class myCircle extends React.Component{
                         <NavLink to='/circle/Master' activeClassName='activeMy'>达人</NavLink>
                     </div>
                     <div className="header">
-                        <span><img src={require("../common/image/加号.png")} alt=""/></span>
-                        <span><img src={require("../common/image/闹铃.png")} alt=""/></span>
+                        <i className='left'><img src={require("../common/image/加号.png")} alt=""/></i>
+                        <i className='right'><img src={require("../common/image/闹铃.png")} alt=""/></i>
                     </div>
                 </section>
 

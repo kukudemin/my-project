@@ -5,7 +5,6 @@ let fs=require("fs"),
 module.exports={
     readJSON(fileName){
         let filePath=`${path.resolve()}/mock/${fileName}`;
-        console.log(filePath);
         return new Promise((resolve,reject)=>{
             fs.readFile(filePath,"utf-8",(err,data)=>{
                 if (err){
@@ -15,6 +14,21 @@ module.exports={
                 resolve(JSON.parse(data));
             })
         })
+    },
+    aryFind(ary1,id,num,ary2){
+        return new Promise((resolve,reject)=>{
+           ary1=ary1.find((item)=>{
+                return item["id"]==id;
+            });
+            resolve(ary1);
+        }).then((resolve)=>{
+            if(ary2){
+                return resolve[ary2].find((item)=>{
+                    return item["num"]==num;
+                })
+            }else {
+                return resolve;
+            }
+        })
     }
-
 }
