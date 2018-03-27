@@ -5,12 +5,12 @@ import {Provider} from "react-redux";
 import store from "./store"
 import myCircle from "./container/MyCircle";
 import Home from "./container/Home";
+import Register from "./container/Register";
+import University from "./container/University";
 
 
 import "./common/css/reset.min.css"
 import "./common/css/public.less"
-
-
 
 
 ReactDOM.render(<Provider store={store}>
@@ -18,6 +18,8 @@ ReactDOM.render(<Provider store={store}>
             <Switch>
                 <Route path='/' exact component={Home}/>
                 <Route path='/circle' component={myCircle}/>
+                <Route path='/register' component={Register}/>
+                <Route path='/university' component={University}/>
                 <Redirect to="/"/>
             </Switch>
         </HashRouter>
