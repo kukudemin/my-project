@@ -1,9 +1,20 @@
-.profile {
-  overflow: hidden;
-  width: 3.2rem;
-  height: 7.25rem;
-  position: absolute;
+
+.profileBox{
+  vertical-align: super;
+  .profile {
+    overflow: hidden;
+    width: 3.2rem;
+    //height: 7.25rem;
+    .profile-pro{
+      width: 3.2rem;
+      height: .44rem;
+    }
+
+  }
   .profile-set {
+    position: fixed;
+    top :0;
+    z-index: 9;
     width: 100%;
     height: .44rem;
     img {
@@ -15,17 +26,14 @@
     }
 
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .profileTab{
+    width: 3.2rem;
+    position: fixed ;
+    bottom :0;
+  }
+  .profileList{
+    width: 3.2rem;
+    left: 0;//Wonderful activities
+  }
 }
+

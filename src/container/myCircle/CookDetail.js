@@ -34,7 +34,7 @@ class CookDetail extends React.Component{
                     <div className='cookContent'>
                         <p className='title'>一直不喜欢奶油，这次使用了山药泥做夹馅</p>
                          <GerenInfo/>
-                        <p className='text'>
+                        <p className='coDetail-text'>
                             方子作了改动，用了大麦若叶粉末做的蛋糕，色彩翠绿清新，在山药泥中加入了鲜红的草莓，酸甜可口颜值更高。春天到了，一款健康养生、绿色清新的蛋糕卷做起来
                         </p>
 

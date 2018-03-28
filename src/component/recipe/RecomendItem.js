@@ -24,7 +24,7 @@ class RecomendItem extends React.Component{
                                         <span className='user'> 小小小鸟</span>
                                         <span className='time'>2018-03-12</span>
                                     </p>
-                                    <p className='text'>
+                                    <p className='commentItem-text'>
                                         佛卡夏是意大利面包
                                     </p>
                                 </div>:<div>
