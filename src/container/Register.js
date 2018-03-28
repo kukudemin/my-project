@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDom from "react-dom";
 import {register} from "../api/profile";
-import {connect} from "react-redux"
+import {connect} from "react-redux";
+import {Link} from "react-router-dom"
 class Register extends React.Component{
 
 
@@ -25,27 +26,22 @@ class Register extends React.Component{
                     <br/><br/>
                 </div>
 
-                    <button className="register-btn"
-                            style={{
-                                width:".8rem",
-                                height:".4rem",
-                                fontSize:".16rem",
-                                borderRadius:".1rem"
-                            }}
-                            onClick={ev => {
-                        let {userNameInp, userPassInp} = this.refs,
-                            userName = userNameInp.value,
-                            userPass = userPassInp.value;
-                        register(userName, userPass).then(result => {
-                            if (result !== '注册成功') {
-                                alert('注册失败!');
-                                return;
-                            }
-                            this.props.history.push('/login');
-                        });
-                    }}>
-                        立即注册
-                    </button>
+                <button onClick={ev => {
+                    let {userNameInp, userPassInp} = this.refs,
+                        userName = userNameInp.value,
+                        userPass = userPassInp.value;
+                    register(userName, userPass).then(result => {
+                        if (result !== '注册成功') {
+                            alert('注册失败!');
+                            return;
+                        }
+                        this.props.history.push('/profile');
+                    });
+                }}>
+                    立即注册
+                </button>
+                <br/><br/>
+                <Link to="/login">已经注册，立即登录!</Link>
             </div>
         </div>
         

@@ -36,6 +36,7 @@ class Home extends React.Component{
     render(){
         let {homeData}=this.props;
         let {data}=this.state;
+        console.log(homeData);
 
         return <div>
             <section className="navContainer">
@@ -81,17 +82,20 @@ class Home extends React.Component{
                 <div className="HomeList">
                     {
                         homeData.map((item,index)=>{
-                            return <div key={index} className="list-Item" >
-                                <div className="list-Img"><img src={item.allDish[index].img} alt=""/></div>
-                                <div className="list-icon">
-                                    <div className="icon-top"><img src={item.icon} alt=""/></div>
-                                    <div className="icon-bottom"><img src={require("../common/image/达人.png")} alt=""/>{item.author}</div>
+                            console.log(item.id);
+                            return <Link to={`/cookDetail`} key={index}>
+                                <div  className="list-Item" >
+                                    <div className="list-Img"><img src={item.allDish[index].img} alt=""/></div>
+                                    <div className="list-icon">
+                                        <div className="icon-top"><img src={item.icon} alt=""/></div>
+                                        <div className="icon-bottom"><img src={require("../common/image/达人.png")} alt=""/>{item.author}</div>
+                                    </div>
+                                    <div className="list-text">
+                                        <h2>{item.allDish[index].title}</h2>
+                                        <p>{item.allDish[index].introduce}</p>
+                                    </div>
                                 </div>
-                                <div className="list-text">
-                                    <h2>{item.allDish[index].title}</h2>
-                                    <p>{item.allDish[index].introduce}</p>
-                                </div>
-                            </div>
+                            </Link>
                         })
                     }
                 </div>
