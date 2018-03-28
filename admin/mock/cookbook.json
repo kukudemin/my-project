@@ -1,6 +1,4 @@
-{
-  "number":3,
-  "persons":[
+[
     { "id":1,
       "icon":"https://image.hongbeibang.com/Ft8zURb7M_IiEVgmkeQTsgnYnLUq?952X936&imageView2/1/w/80/h/80",
       "author":"penny",
@@ -943,4 +941,3 @@
       ]
     }
   ]
-}

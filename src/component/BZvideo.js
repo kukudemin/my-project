@@ -1,14 +1,18 @@
 import React from "react"
 import {connect} from "react-redux"
+import {withRouter} from "react-router-dom"
 import "./BZvideo.less"
 class BZvideo extends React.Component{
     constructor(){
         super()
     }
     render(){
+        let {history}=this.props;
         return <div>
             <div className="header">
-                <span className="goBack"><img src={require("../common/image/返回.png")} alt=""/></span>
+                <span className="goBack" onClick={()=>{
+                    history.goBack(1)
+                }}><img src={require("../common/image/返回.png")} alt=""/></span>
                 <span className="collection">收藏</span>
             </div>
             <div className="video-BZ">
@@ -54,4 +58,4 @@ class BZvideo extends React.Component{
         </div>
     }
 }
-export default connect()(BZvideo)
+export default withRouter(connect()(BZvideo))

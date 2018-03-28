@@ -30,5 +30,18 @@ module.exports={
                 return resolve;
             }
         })
+    },
+    writeJSON(data,pathName){
+        let filePath=`${path.resolve()}/mock/${pathName}`,
+            str=typeof data!=="string"?JSON.stringify(data):data;
+        return new Promise((resolve,reject)=>{
+            fs.writeFile(filePath,str,"utf-8",(err)=>{
+                if(err){
+                    reject(err);
+                }
+                resolve();
+            })
+        })
+
     }
 }

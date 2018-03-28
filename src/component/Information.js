@@ -5,9 +5,12 @@ class Information extends React.Component{
         super()
     }
     render(){
-        return <div>
+        return <div className="information">
             <div>
-                <h2>4564654646465</h2>
+
+            </div>
+            <div>
+
             </div>
         </div>
     }

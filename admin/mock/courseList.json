@@ -1,7 +1,4 @@
 [
-  {
-    "id":1,
-    "course":[
       {
         "num":1,
         "img":"https://image.hongbeibang.com/Fid0l4JQRpovFzs1ulfqFkW36ZQx?750X400&imageView2/1/w/200/h/133",
@@ -34,14 +31,13 @@
         "time":"2017-03-30 19:00:00",
         "introduce":"入口即化，犹如棉花般口感的轻乳酪蛋糕~",
         "teacherImg":"https://image.hongbeibang.com/FucF4ejlQCVlH_qm6YL6YhVL1wOr?1043X2000&imageView2/1/w/750/h/1438"
-      }
-    ]
-  },
-  {
-    "id":2,
-    "course":[
+      },
+
+
+
+
       {
-        "num":1,
+        "num":4,
         "img":"https://image.hongbeibang.com/FjI-T_31jrmXmU889rQn0hshLeu4?1181X787&imageView2/1/w/200/h/133",
         "title":"火爆大江南北的爆奶包！",
         "price":"¥19.90",
@@ -52,7 +48,7 @@
         "teacherImg":"https://image.hongbeibang.com/FucF4ejlQCVlH_qm6YL6YhVL1wOr?1043X2000&imageView2/1/w/750/h/1438"
       },
       {
-        "num":2,
+        "num":5,
         "img":"https://image.hongbeibang.com/FsMV6b1Bk0nhJVAs-Rl4c_z_jQTs?750X400&imageView2/1/w/200/h/133",
         "title":"超Q弹雪媚娘",
         "price":"¥19.90",
@@ -63,7 +59,7 @@
         "teacherImg":"https://image.hongbeibang.com/FucF4ejlQCVlH_qm6YL6YhVL1wOr?1043X2000&imageView2/1/w/750/h/1438"
       },
       {
-        "num":3,
+        "num":6,
         "img":"https://image.hongbeibang.com/FsMV6b1Bk0nhJVAs-Rl4c_z_jQTs?750X400&imageView2/1/w/200/h/133",
         "title":"超Q弹雪媚娘",
         "price":"¥19.90",
@@ -72,14 +68,14 @@
         "time":"2017-03-30 19:00:00",
         "introduce":"入口即化，犹如棉花般口感的轻乳酪蛋糕~",
         "teacherImg":"https://image.hongbeibang.com/FucF4ejlQCVlH_qm6YL6YhVL1wOr?1043X2000&imageView2/1/w/750/h/1438"
-      }
-    ]
-  },
-  {
-    "id":3,
-    "course":[
+      },
+
+
+
+
+
       {
-        "num":1,
+        "num":7,
         "img":"https://image.hongbeibang.com/Fvd-AvvWBHKhGN_tItT2R_LQx91I?750X400&imageView2/1/w/200/h/133",
         "title":"入口即化的轻乳酪蛋糕",
         "price":"¥19.90",
@@ -90,7 +86,7 @@
         "teacherImg":"https://image.hongbeibang.com/FucF4ejlQCVlH_qm6YL6YhVL1wOr?1043X2000&imageView2/1/w/750/h/1438"
       },
       {
-        "num":2,
+        "num":8,
         "img":"https://image.hongbeibang.com/FpngrmIo3QX4Yftualmfde70wfUL?750X400&imageView2/1/w/200/h/133",
         "title":"红豆抹茶麻薯软欧包",
         "price":"¥19.90",
@@ -101,7 +97,7 @@
         "teacherImg":"https://image.hongbeibang.com/FucF4ejlQCVlH_qm6YL6YhVL1wOr?1043X2000&imageView2/1/w/750/h/1438"
       },
       {
-        "num":3,
+        "num":9,
         "img":"https://image.hongbeibang.com/Fq27TWYTjMo3VFwB-RViTPSN5QRh?750X399&imageView2/1/w/200/h/133",
         "title":"蛋糕基础淡奶油抹面技法课",
         "price":"¥19.90",
@@ -111,6 +107,4 @@
         "introduce":"入口即化，犹如棉花般口感的轻乳酪蛋糕~",
         "teacherImg":"https://image.hongbeibang.com/FucF4ejlQCVlH_qm6YL6YhVL1wOr?1043X2000&imageView2/1/w/750/h/1438"
       }
-    ]
-  }
 ]
