@@ -36,16 +36,13 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/' exact component={Home}/>
                 <Route path='/home' component={Home}/>
                 <Route path='/circle' component={myCircle}/>
-                <Route path='/cookDetail' component={CookDetail}/>
+                <Route path='/cookDetail/:id?' component={CookDetail}/>
                 <Route path='/recipeDetail' component={RecipeDetail}/>
                 <Route path='/register' component={Register}/>
                 <Route path='/university' component={University}/>
 
-
                 <Route path='/profile' component={Profile}/>
-
                 <Route path='/newHand' component={NewHand}/>
-
 
                 <Route path='/pay' component={Pay}/>
                 <Route path='/series' component={Series}/>
