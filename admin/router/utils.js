@@ -20,7 +20,6 @@ module.exports={
            ary1=ary1.find((item)=>{
                 return item["id"]==id;
             });
-            console.log(ary1);
             resolve(ary1);
         }).then((resolve)=>{
             if(ary2){
@@ -31,5 +30,18 @@ module.exports={
                 return resolve;
             }
         })
+    },
+    writeJSON(data,pathName){
+        let filePath=`${path.resolve()}/mock/${pathName}`,
+            str=typeof data!=="string"?JSON.stringify(data):data;
+        return new Promise((resolve,reject)=>{
+            fs.writeFile(filePath,str,"utf-8",(err)=>{
+                if(err){
+                    reject(err);
+                }
+                resolve();
+            })
+        })
+
     }
 }
