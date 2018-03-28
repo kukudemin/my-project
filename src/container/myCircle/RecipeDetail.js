@@ -16,16 +16,23 @@ class RecipeDetail extends React.Component{
         super();
     }
     render(){
+        let {history}=this.props;
         return (
             <div className='RecipeDetail'>
                 <section className='detail-header'>
-                    <span className='icon-fanhui'>
-                        <img src={require('../../common/image/icon-fanhui.png')} alt=""/></span>
+                    <div className='recipe-nav'>
+                          <span className='icon-fanhui' onClick={(ev)=>{
+                              history.goBack(1)
+                          }}>
+                        <img src={require('../../common/image/icon-fanhui.png')} alt=""/>
+                          </span>
+                        <span className='title'>作品</span>
+                    </div>
 
-                    <span className='title'>作品</span>
                 </section>
 
                 <section className='detail-content'>
+                    <button className='focus'>+ 关注</button>
                     <Recipe list='detail'/>
                     <div className='nav'>
                         <NavLink to='/recipeDetail'  exact activeClassName='activeMy'>点赞 199</NavLink>

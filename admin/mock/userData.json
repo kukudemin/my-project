@@ -414,7 +414,8 @@
           }
         }
       ],
-      "allWorks":[{
+      "allWorks":[
+        {
         "createTime":"2018-03-28 16:03:47",
         "title":"自己制作生日蛋糕",
         "description":"突然想到每次蛋糕都是买的,但是想想还是自己动手做吧，自己动手丰衣足食 总有一些美好",
@@ -455,13 +456,15 @@
             }
           ]
         }
-      }]
+      }
+      ]
     },
     {
       "id":2,
       "icon":"https://image.hongbeibang.com/FripNPYI6Hz07a2lxcfnrR3nhuLA?943X943&imageView2/1/w/80/h/80",
       "author":"高小疯",
       "isFocus":0,
+      "isStar":1,
       "allDish":[
         {
           "num":1,
@@ -565,20 +568,20 @@
           "Views":2658,
           "like":21,
           "remindPoint":{
-          "count":2,
-          "data":[
-            {
-              "clientName":"那年花开",
-              "remindTime":"2017-12-20 16:03:47",
-              "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
-            },
-            {
-              "clientName":"小鱼",
-              "remindTime":"2018-02-24 14:03:47",
-              "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
-            }
-          ]
-        },
+            "count":2,
+            "data":[
+              {
+                "clientName":"那年花开",
+                "remindTime":"2017-12-20 16:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              },
+              {
+                "clientName":"小鱼",
+                "remindTime":"2018-02-24 14:03:47",
+                "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+              }
+            ]
+          },
           "comment":{
             "count":2,
             "data":[
@@ -866,7 +869,6 @@
           }
         }
       ],
-      "isStar":1,
       "allWorks":[{
         "createTime":"2018-03-28 16:03:47",
         "title":"自己制作生日蛋糕",
