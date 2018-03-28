@@ -37,7 +37,7 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/home' component={Home}/>
                 <Route path='/circle' component={myCircle}/>
 
-                <Route path='/cookDetail//:id?' component={CookDetail}/>
+                <Route path='/cookDetail' component={CookDetail}/>
                 <Route path='/recipeDetail/:id?' component={RecipeDetail}/>
 
                 <Route path='/register' component={Register}/>
