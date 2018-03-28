@@ -6,13 +6,24 @@ import MasterList from "./myCircle/MasterList"
 import AttentionList from "./myCircle/AttentionList"
 import Tab from "../component/Tab"
 import "./MyCircle.less"
+import {getNew} from "../api/circle"
 
 class myCircle extends React.Component{
     constructor(){
         super();
+        this.state={
+            allNewList:[],
+        }
     }
-
+    async componentWillMount(){
+        let dataNew =  await getNew();
+        this.setState({
+            allNewList:dataNew
+        });
+        //console.log(dataNew);
+    }
     render(){
+        let {allNewList}=this.state;
         return (
             <section className='myCircle'>
 
@@ -31,7 +42,9 @@ class myCircle extends React.Component{
                 <section className='CircleList'>
                     {/* 通过switch 切换二级路由 */}
                     <Switch>
-                        <Route from="/circle" exact  component={NewWorks}/>
+                        <Route from="/circle" exact  component={()=>{
+                            return <NewWorks data={ allNewList}/>
+                        }}/>
                         <Route path="/circle/attention" component={AttentionList}/>
                         <Route path="/circle/master" component={MasterList}/>
                     </Switch>

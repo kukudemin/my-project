@@ -6,10 +6,23 @@ import "./CookDetail.less"
 import GerenInfo from "../../component/recipe/GerenInfo"
 import DetailTab from "../../component/recipe/DetailTab"
 import RecomendItem from "../../component/recipe/RecomendItem"
+import {getOneNew} from "../../api/circle";
 
 class CookDetail extends React.Component{
     constructor(){
         super();
+    }
+    async componentWillMount(){
+        let {match:{params:{id}}}=this.props;
+        /* 根据id 获取数据 post 请求 */
+        let result =await getOneNew(id);
+        result=result.find((item)=>{
+            return item["id"]==id;
+        });
+
+        result={...result,...result.allWorks[0]};
+        this.setState({infoData:result});
+        console.log(result);
     }
 
     render(){

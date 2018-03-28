@@ -8,28 +8,32 @@ class RecomendItem extends React.Component{
     constructor(){
         super();
     }
+    componentWillMount(){
+
+    }
 
     render(){
+        let {data,index} =this.props;
         return (
-            <div className='commentItem'>
+            <div className='commentItem' key={index}>
                 <Link to='/otherInfo'>
                     <div className='infoHeader'>
                         <div className='infoLeft'>
-                            <img src="https://image.hongbeibang.com/Fr_moz4Z7GkZTjZ-K5qNSBjIXtSu?132X132&imageView2/1/w/80/h/80" alt=""/>
+                            <img src={data.img} alt=""/>
                         </div>
                         <div className='infoRight'>
                             { this.props.bottomList=="comment"?
                                 <div>
                                     <p className='userName'>
-                                        <span className='user'> 小小小鸟</span>
-                                        <span className='time'>2018-03-12</span>
+                                        <span className='user'> {data.clientName}</span>
+                                        <span className='time'>{data.commentTime}</span>
                                     </p>
                                     <p className='commentItem-text'>
-                                        佛卡夏是意大利面包
+                                        {data.commentText}
                                     </p>
                                 </div>:<div>
                                     <p className='recUser'>
-                                        据说它的起源是因为做Pizza时馅料不
+                                        {data.clientName}
                                     </p>
                                 </div>}
                         </div>

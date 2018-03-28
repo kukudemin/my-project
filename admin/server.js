@@ -21,5 +21,6 @@ app.use('/home',require("./router/home"));
 app.use('/college',require("./router/college"));
 app.use('/show',require("./router/show"));
 app.use('/question',require("./router/question"));
+app.use('/circle',require("./router/circle"));
 
 
