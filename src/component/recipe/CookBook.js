@@ -31,7 +31,7 @@ class CookBook extends React.Component{
                 </a>
 
                 {/*跳转到 详情 封面图片*/}
-                <Link to={`/cookDetail/${id+""}`}>
+                <Link to={`/cookDetail?id=${id}&dishNum=${num}`}>
                     <div className='coverImg'>
                         <div className='cover'>
                             <img src={img}/>

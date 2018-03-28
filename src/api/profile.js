@@ -16,7 +16,7 @@ export function isLogin() {
 export function register(userName, userPass) {
     return axios.post('/profile/register', {
         userName: userName,
-        pw: md5(userPass)
+        pw: userPass
     });
 }
 

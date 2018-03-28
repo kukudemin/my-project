@@ -6,27 +6,34 @@ import "./CookDetail.less"
 import GerenInfo from "../../component/recipe/GerenInfo"
 import DetailTab from "../../component/recipe/DetailTab"
 import RecomendItem from "../../component/recipe/RecomendItem"
-import {getOneNew} from "../../api/circle";
+import {getOneNew,cookDetail,allMaster} from "../../api/circle";
+import utils from "../../common/js/utils"
 
 class CookDetail extends React.Component{
     constructor(){
         super();
+        this.state={
+            cookData:{}
+        }
     }
     async componentWillMount(){
-        let {match:{params:{id}}}=this.props;
-        /* 根据id 获取数据 post 请求 */
-        let result =await getOneNew(id);
-        result=result.find((item)=>{
-            return item["id"]==id;
-        });
-
-        result={...result,...result.allWorks[0]};
-        this.setState({infoData:result});
-        console.log(result);
+        let str = this.props.location.search;
+        function urlToObj(url) {
+            url = url.split("?")[1];
+            return eval("({" + url.replace(/=/g, ":'").replace(/&/g, "',") + "'})");
+        }
+        let obj=urlToObj(this.props.location.search);
+        let result =await allMaster();//所有的shipu数据;
+       let dataInfo =  result.filter((item)=>{ return item.id===obj.id});
+        console.log(dataInfo);
+        let resolute= await utils.aryFind(result,obj.id,obj['dishNum'],"allDish");
+        this.setState({cookData:{...resolute}});
     }
 
     render(){
         let {history}=this.props;
+        let {num,title,img,introduce,ingredient=[],steps=[],remindPoint={"data":[]},tips,comment=[]}=this.state.cookData;
+
         return (
             <div className='cookDetail'>
                 <section className='detail-headerc'>
@@ -36,21 +43,20 @@ class CookDetail extends React.Component{
                           }}>
                         <img src={require('../../common/image/icon-fanhui.png')} alt=""/>
                           </span>
-                        <span className='title'>戚风蛋糕...</span>
+                        <span className='title'>{title}</span>
                         <span className='collect'>收藏</span>
                     </div>
 
                 </section>
                 <section className='cookInfo'>
-                    <div className='coverimg'><img src="https://image.hongbeibang.com/FoNCLtScqyL1SVjWtcI14wf3_wFp?1440X1080&imageView2/1/w/750/h/562|watermark/1/image/aHR0cDovL2ltYWdlLmhvbmdiZWliYW5nLmNvbS9GaXZ3UkFMS3ZpVG9XM3V2SmxmSnZvV0UtNjh2/dissolve/50/gravity/SouthEast/dx/25/dy/25/ws/0.07457627118644067" alt=""/>
+                    <div className='coverimg'><img src={img} alt=""/>
                         </div>
                     <div className='cookContent'>
-                        <p className='title'>一直不喜欢奶油，这次使用了山药泥做夹馅</p>
+                        <p className='title'>{title}</p>
                          <GerenInfo/>
                         <p className='coDetail-text'>
-                            方子作了改动，用了大麦若叶粉末做的蛋糕，色彩翠绿清新，在山药泥中加入了鲜红的草莓，酸甜可口颜值更高。春天到了，一款健康养生、绿色清新的蛋糕卷做起来
+                            {introduce}
                         </p>
-
                         <div className='steps'>
                             <div className='inputNum'>
                                <div className='inputNum-con'>
@@ -63,25 +69,34 @@ class CookDetail extends React.Component{
                                    <span>份</span>
                                </div>
                             </div>
+                            {/* 材料 */}
                             <div className='cailiao'>
                                 <h3>用料</h3>
-                                <p  className='hang'><span className='left'>玉米油</span><span className='right'>420克</span></p>
-                                <p ><span className='left'>面粉</span><span className='right'>20克</span></p>
+                                {
+                                    ingredient.map((item,ind)=>{
+                                        for (let key in item){
+                                            return (
+                                                <p  className='hang' key={ind}>
+                                                    <span className='left'>{key}</span>
+                                                    <span className='right'>{item.key}</span>
+                                                </p>
+                                            )
+                                        }
+                                    })
+                                }
                             </div>
-                             <div className='steps-item'>
-                                 <h3>step1</h3>
-                                 <div><img  src="https://image.hongbeibang.com/FqG2JBtUV7gVqbu_hpCxA1lg6t0W?1440X1080&imageView2/1/w/600/h/360|watermark/1/image/aHR0cDovL2ltYWdlLmhvbmdiZWliYW5nLmNvbS9GaXZ3UkFMS3ZpVG9XM3V2SmxmSnZvV0UtNjh2/dissolve/50/gravity/SouthEast/dx/25/dy/25/ws/0.09322033898305083" alt=""/></div>
-                                 <p>
-                                     <span>配料称好备用，玉米油和牛奶可以倒在一起。盆里要干净无水无油，小心分离蛋白和蛋黄。白砂糖分出15克加入蛋黄里，加入盐。</span>
-                                 </p>
-                             </div>
-                            <div className='steps-item'>
-                                <h3>step1</h3>
-                                <div><img  src="https://image.hongbeibang.com/FqG2JBtUV7gVqbu_hpCxA1lg6t0W?1440X1080&imageView2/1/w/600/h/360|watermark/1/image/aHR0cDovL2ltYWdlLmhvbmdiZWliYW5nLmNvbS9GaXZ3UkFMS3ZpVG9XM3V2SmxmSnZvV0UtNjh2/dissolve/50/gravity/SouthEast/dx/25/dy/25/ws/0.09322033898305083" alt=""/></div>
-                                <p>
-                                    <span>配料称好备用，玉米油和牛奶可以倒在一起。盆里要干净无水无油，小心分离蛋白和蛋黄。白砂糖分出15克加入蛋黄里，加入盐。</span>
-                                </p>
-                            </div>
+
+                            {
+                                steps.map((item,index)=>{
+                                    return  <div className='steps-item' key={index}>
+                                        <h3>{item.step}</h3>
+                                        <div><img  src={item.img} alt=""/></div>
+                                        <p>
+                                            <span>{item.explain}</span>
+                                        </p>
+                                    </div>
+                                })
+                            }
                         </div>
 
 
@@ -89,21 +104,25 @@ class CookDetail extends React.Component{
                     {/*  评论部分 */}
 
                     <div className='nav'>
-                        <NavLink to='/cookDetail'  exact activeClassName='activeMy'>点赞 199</NavLink>
-                        <NavLink to='/cookDetail/comment' activeClassName='activeMy'>评论 23 </NavLink>
+                        <NavLink to='/cookDetail'  exact activeClassName='activeMy'>点赞 {remindPoint.count}</NavLink>
+                        <NavLink to='/cookDetail/comment' activeClassName='activeMy'>评论 {comment.count} </NavLink>
                     </div>
                     <div className='recAndComList'>
                         <Switch>
                             <Route from="/cookDetail" exact  component={()=>{
                                 return <div>
-                                    <RecomendItem />
-                                    <RecomendItem />
+                                        { remindPoint.data.map((item,index)=>{
+                                            return  <RecomendItem data={item} key={index}/>
+                                        })}
+
                                 </div>
                             }}/>
                             <Route from="/cookDetail/comment" exact  component={()=>{
                                 return <div>
-                                    <RecomendItem bottomList='comment'/>
-                                    <RecomendItem bottomList='comment'/>
+                                    { remindPoint.data.map((item,index)=>{
+                                        return  <RecomendItem bottomList='comment' data={item} key={index}/>
+                                    })}
+
                                 </div>
                             }}/>
                         </Switch>

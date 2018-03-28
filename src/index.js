@@ -39,7 +39,7 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/home' component={Home}/>
                 <Route path='/circle' component={myCircle}/>
                 <Route path='/login' component={Login}/>
-                <Route path='/cookDetail//:id?' component={CookDetail}/>
+                <Route path='/cookDetail/:id?' component={CookDetail}/>
                 <Route path='/recipeDetail/:id?' component={RecipeDetail}/>
                 <Route path='/university' component={University}/>
                 <Route path='/profile' component={Profile}/>

@@ -59,7 +59,7 @@ class RecipeDetail extends React.Component{
 
                     <div className='nav'>
                         <NavLink to='/recipeDetail'  exact  activeClassName='activeMy'>点赞 {remindPoint.count}</NavLink>
-                        <NavLink to='/recipeDetail/comment' activeClassName='activeMy'>评论 {comment.count} </NavLink>
+                        <NavLink to='/recipeDetail/comment' exact activeClassName='activeMy'>评论 {comment.count} </NavLink>
                     </div>
                     <div className='recAndComList'>
                         <Switch>

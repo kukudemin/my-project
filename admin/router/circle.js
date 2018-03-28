@@ -21,4 +21,16 @@ route.post("/list",async function (req,res) {
     res.send(data);
 });
 
+route.get('/detail',async function (req,res) {
+    let {id,dishNum}=req.query;
+    let data=await utils.readJSON("userData.json");
+    let resolute=data.persons.find((item)=>{
+        return item.id==id;
+    }).allDish.find((item)=>{
+        return item.num==dishNum;
+    });
+    /* let resolute= await utils.aryFind(data.persons,id,dishNum,"allDish");*/
+    res.send(resolute);
+});
+
 module.exports=route;

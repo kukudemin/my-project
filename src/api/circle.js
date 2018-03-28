@@ -14,3 +14,8 @@ export function getOneNew(id) {
 export function allMaster() {
     return axios.get('/circle/list');
 }
+
+/*  食谱详情页  */
+export function cookDetail(id,dishNum) {
+    return axios.get('/circle/detail',id,dishNum);
+}
