@@ -40,8 +40,10 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/recipeDetail' component={RecipeDetail}/>
                 <Route path='/register' component={Register}/>
                 <Route path='/university' component={University}/>
+
                 <Route path='/profile' component={Profile}/>
                 <Route path='/newHand' component={NewHand}/>
+
                 <Route path='/pay' component={Pay}/>
                 <Route path='/series' component={Series}/>
                 <Route path='/courseDetail' component={CourseDetail}/>
@@ -49,6 +51,7 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/newHand' component={NewHand}/>
                 <Route path='/video' component={BZvideo}/>
                 <Route path='/information' component={Information}/>
+
                 <Redirect to="/"/>
             </Switch>
         </HashRouter>
