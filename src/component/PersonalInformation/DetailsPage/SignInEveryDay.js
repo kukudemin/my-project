@@ -2,6 +2,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 import {withRouter, Link} from 'react-router-dom';
+import "./SignInEveryDay.less"
 export default class SignInEveryDay extends React.Component{
 
 
@@ -13,7 +14,7 @@ export default class SignInEveryDay extends React.Component{
                     <img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" alt=""/>
                 </span>
                 </Link>
-                <h3 className="SignInEveryDay-title">精彩活动</h3>
+                <h3 className="SignInEveryDay-title">每日签到</h3>
             </div>
         </div>
         

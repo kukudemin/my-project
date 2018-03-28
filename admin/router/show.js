@@ -2,6 +2,7 @@ let express=require("express"),
     route=express.Router(),
     utils=require("./utils");
 
+/*  获取所有用户的dish  */
 route.use(async function (req,res,next) {
    let data=await utils.readJSON("userData.json");
    req.resolve=data.persons;
@@ -19,5 +20,6 @@ route.post("/list",async function (req,res) {
     let data=await utils.aryFind(req.resolve,id);
     res.send(data);
 });
+
 
 module.exports=route;

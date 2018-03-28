@@ -2,6 +2,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 import {withRouter, Link} from 'react-router-dom';
+import "./MyCourse.less"
 export default class MyCourse extends React.Component{
 
 

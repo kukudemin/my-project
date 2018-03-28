@@ -15,7 +15,7 @@ class MasterList extends React.Component{
 
     async componentWillMount(){
          let result =await allMaster();//所有的shipu数据
-        console.log(result);
+        //console.log(result);
         let arrMaster=[];
         result.forEach((item,index)=>{
             if(item.isStar){

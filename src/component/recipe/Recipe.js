@@ -19,7 +19,7 @@ class Recipe extends React.Component{
 
 
         return (
-            <div className='recipe-item'  id>
+            <div className='recipe-item'>
                 {/*个人列表*/}
                     <a>
                        <div className='infoHeader'>
