@@ -5,7 +5,9 @@ import NavList from "../component/NavList"
 import {connect} from 'react-redux';
 import {Link} from "react-router-dom"
 import "./Home.less"
-import {queryBanner,getStar,homeList} from "../api/home";
+import {queryBanner,getStar} from "../api/home";
+import action from "../store/action";
+
 class Home extends React.Component{
 
     constructor(){
@@ -13,7 +15,6 @@ class Home extends React.Component{
         this.state={
             bannerData:{},
             data:[],
-            listData:[],
         }
     }
 
@@ -26,17 +27,16 @@ class Home extends React.Component{
         this.setState({
             data
         });
-        let listData=await homeList();
-        this.setState({
-            listData:listData.persons
-        });
-        console.log(listData);
+
+        let {homeData,getHomeList}=this.props;
+        if (homeData&&homeData.length===0) {
+            getHomeList()
+        }
     }
     render(){
-        let {data,listData}=this.state;
-        if (data.length === 0 ||listData.length===0) {
-            return null;
-        }
+        let {homeData}=this.props;
+        let {data}=this.state;
+
         return <div>
             <section className="navContainer">
                 <div className="header">
@@ -80,8 +80,8 @@ class Home extends React.Component{
                 </div>
                 <div className="HomeList">
                     {
-                        listData.map((item,index)=>{
-                            return <div key={index} className="list-Item">
+                        homeData.map((item,index)=>{
+                            return <div key={index} className="list-Item" >
                                 <div className="list-Img"><img src={item.allDish[index].img} alt=""/></div>
                                 <div className="list-icon">
                                     <div className="icon-top"><img src={item.icon} alt=""/></div>
@@ -94,7 +94,6 @@ class Home extends React.Component{
                             </div>
                         })
                     }
-
                 </div>
             </section>
             <section className="footerContainer">
@@ -103,4 +102,4 @@ class Home extends React.Component{
         </div>
     }
 }
-export default connect()(Home)
+export default connect((state)=>({...state.home}),action.home)(Home)
