@@ -36,17 +36,12 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/' exact component={Home}/>
                 <Route path='/home' component={Home}/>
                 <Route path='/circle' component={myCircle}/>
-                <Route path='/cookDetail' component={CookDetail}/>
+                <Route path='/cookDetail/:id?' component={CookDetail}/>
                 <Route path='/recipeDetail' component={RecipeDetail}/>
                 <Route path='/register' component={Register}/>
                 <Route path='/university' component={University}/>
-<<<<<<< HEAD
-
                 <Route path='/profile' component={Profile}/>
-
                 <Route path='/newHand' component={NewHand}/>
-
-=======
                 <Route path='/pay' component={Pay}/>
                 <Route path='/series' component={Series}/>
                 <Route path='/courseDetail' component={CourseDetail}/>
@@ -54,7 +49,6 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/newHand' component={NewHand}/>
                 <Route path='/video' component={BZvideo}/>
                 <Route path='/information' component={Information}/>
->>>>>>> d86990cc62ce8ace6b06167d76b0d4c3c9c9502a
                 <Redirect to="/"/>
             </Switch>
         </HashRouter>
