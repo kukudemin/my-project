@@ -4,8 +4,8 @@ let md5 = require('blueimp-md5');
 
 export function login(userName, userPass) {
     return axios.post('/profile/login', {
-        name: userName,
-        pass: md5(userPass)
+        userName: userName,
+        pw: userPass
     });
 }
 
@@ -15,8 +15,8 @@ export function isLogin() {
 
 export function register(userName, userPass) {
     return axios.post('/profile/register', {
-        name: userName,
-        pass: md5(userPass)
+        userName: userName,
+        pw: md5(userPass)
     });
 }
 
