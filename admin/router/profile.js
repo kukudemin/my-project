@@ -13,7 +13,7 @@ route.use(function (req,res,next) {
 route.post("/login",(req,res)=>{
     let {userName,pw}=req.body;
     let info=req.data.find((item)=>{
-        return (item.userName===userName)&&(item.password===pw);
+        return (item.userName===userName)&&(item.pw===pw);
     });
     if(info){
        req.session.userId=info.id;
@@ -34,7 +34,6 @@ route.post("/register",(req,res)=>{
     }else{
         req.body.id=++req.num;
         req.data.push(req.body);
-        console.log(req.data);
         utils.writeJSON({
             num:req.num,
             data:req.data
