@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDom from "react-dom";
-import {Link} from "react-router-dom"
 import {register} from "../api/profile";
-export default class Register extends React.Component{
+import {connect} from "react-redux"
+class Register extends React.Component{
 
 
     render(){
@@ -25,7 +25,6 @@ export default class Register extends React.Component{
                     <br/><br/>
                 </div>
 
-                <Link to="/login">
                     <button className="register-btn"
                             style={{
                                 width:".8rem",
@@ -38,20 +37,18 @@ export default class Register extends React.Component{
                             userName = userNameInp.value,
                             userPass = userPassInp.value;
                         register(userName, userPass).then(result => {
-                            if (result !== 'success') {
+                            if (result !== '注册成功') {
                                 alert('注册失败!');
                                 return;
                             }
-                            this.props.history.push('/profile');
+                            this.props.history.push('/login');
                         });
                     }}>
                         立即注册
                     </button>
-                </Link>
-                <br/><br/>
-                <Link to="/register" >{}</Link>
             </div>
         </div>
         
     }
 }
+export default connect()(Register)

@@ -28,7 +28,7 @@ class Tab extends React.Component{
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/register">
+                    <NavLink to="/login">
                         <i className="iconfont icon-home"></i>
                         小窝
                     </NavLink>
