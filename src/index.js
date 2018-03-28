@@ -6,7 +6,8 @@ import store from "./store"
 import myCircle from "./container/MyCircle";
 import NewHand from "./component/NewHand";
 import Home from "./container/Home";
-import Register from "./container/Register";
+import Login from "./container/Login";
+import Register from "./container/Register"
 import University from "./container/University";
 
 import Pay from "./container/university/Pay";
@@ -24,6 +25,10 @@ import CourseDetail from "./container/university/CourseDetail";
 import CookDetail from "./container/myCircle/CookDetail";
 import RecipeDetail from "./container/myCircle/RecipeDetail";
 import Information from "./component/Information";
+import WonderfulActivities from "./component/PersonalInformation/DetailsPage/WonderfulActivities";
+import ApplyForPerson from "./component/PersonalInformation/DetailsPage/ApplyForPerson";
+import BrowseRecords from "./component/PersonalInformation/DetailsPage/BrowseRecords";
+import ExchangeTribute from "./component/PersonalInformation/DetailsPage/ExchangeTribute";
 
 
 
@@ -38,7 +43,7 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/circle' component={myCircle}/>
                 <Route path='/cookDetail' component={CookDetail}/>
                 <Route path='/recipeDetail' component={RecipeDetail}/>
-                <Route path='/register' component={Register}/>
+                <Route path='/login' component={Login}/>
                 <Route path='/university' component={University}/>
 
 
@@ -54,6 +59,12 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/newHand' component={NewHand}/>
                 <Route path='/video' component={BZvideo}/>
                 <Route path='/information' component={Information}/>
+                <Route path='/wonderfulActivities' component={WonderfulActivities}/>
+                <Route path='/applyForPerson' component={ApplyForPerson}/>
+                <Route path='/browseRecords' component={BrowseRecords}/>
+                <Route path='/exchangeTribute' component={ExchangeTribute}/>
+                <Route path="/register" component={Register}/>
+
 
                 <Redirect to="/"/>
             </Switch>
