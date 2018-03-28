@@ -20,6 +20,7 @@ module.exports={
            ary1=ary1.find((item)=>{
                 return item["id"]==id;
             });
+            console.log(ary1);
             resolve(ary1);
         }).then((resolve)=>{
             if(ary2){

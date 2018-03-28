@@ -15,6 +15,7 @@ route.get('/allStar',async function (req,res) {
 });
 route.get('/star',async function (req,res) {
     let data=await utils.readJSON("cookbook.json");
+
     res.send(data);
 });
 route.get('/recipe',async function (req,res) {
