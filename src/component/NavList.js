@@ -1,7 +1,7 @@
 import React from "react"
 import {connect} from "react-redux"
 import PropTypes from "prop-types"
-import {Link} from "react-router-dom"
+import {Link,withRouter} from "react-router-dom"
 import "./NavList.less"
 class NavList extends React.Component{
     static defaultProps = {
@@ -15,7 +15,7 @@ class NavList extends React.Component{
         super()
     }
     render(){
-        let {data}=this.props;
+        let {data,history}=this.props;
         if (data.length === 0) {
             return null;
         }
@@ -24,7 +24,7 @@ class NavList extends React.Component{
             {
                 data.map((item,index)=>{
                     return <Link to={ary[index]} key={index} className="listItem">
-                        <div className="item" >
+                        <div className="item">
                             <img src={item.image} alt=""/>
                         </div>
                         <p>{item.title}</p>
@@ -34,4 +34,4 @@ class NavList extends React.Component{
         </div>
     }
 }
-export default connect()(NavList)
+export default withRouter(connect()(NavList))
