@@ -36,7 +36,6 @@ class Home extends React.Component{
     render(){
         let {homeData}=this.props;
         let {data}=this.state;
-        console.log(homeData);
 
         return <div>
             <section className="navContainer">
