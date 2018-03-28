@@ -6,7 +6,7 @@ import React, {Component} from 'react';
 import "./Login.less"
 import fetch from 'isomorphic-fetch';
 import {Link} from 'react-router-dom';
-import {register} from '../api/profile';
+import {login} from '../api/profile';
 
 class Login extends Component {
     constructor(props) {
@@ -73,9 +73,9 @@ class Login extends Component {
                  let {userNameInp, userPassInp} = this.refs,
                      userName = userNameInp.value,
                      userPass = userPassInp.value;
-                 register(userName, userPass).then(result => {
-                     if (result !== 'success') {
-                         alert('注册失败!');
+                 login(userName, userPass).then(result => {
+                     if (result !== '登录成功') {
+                         alert('用户名或密码错误!');
                          return;
                      }
                      this.props.history.push('/profile');
