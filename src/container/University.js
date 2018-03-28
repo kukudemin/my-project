@@ -5,12 +5,29 @@ import '../common/css/reset.min.css'
 import Tab from '../component/Tab'
 import Pay from "./university/Pay";
 import { Link} from 'react-router-dom';
+import axios from 'axios'
+import {courseList, universityList} from "../api/university";
 export default class University extends Component{
     constructor(){
         super();
+        this.state={
+            courseList:{}
+        }
     }
 
-    render(){
+
+
+    async componentWillMount() {
+        let result = await courseList();
+        this.setState({
+            courseList: result
+        });
+
+
+
+    }
+        render(){
+
         return (
            <div className="university">
                <div className='text'>
@@ -23,7 +40,6 @@ export default class University extends Component{
                </div>
                <ul className='universityList'>
                    <li className="universityItem">
-
                        <a href="">
                            <h3 className='course'>预科班 (新手尝鲜)</h3>
                            <div className='container clearfix'>
@@ -43,12 +59,9 @@ export default class University extends Component{
                                    <p className='date'>
                                        <span>2017-3-25</span>
                                    </p>
-
                                </div>
-
                            </div>
                        </a>
-
                    </li>
                    <li className="universityItem">
                        <a href="">
