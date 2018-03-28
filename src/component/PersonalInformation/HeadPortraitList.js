@@ -3,6 +3,9 @@ import ReactDom from "react-dom";
 import {withRouter, Link} from 'react-router-dom';
 import "./HeadPortraitList.less";
 import ApplyForPerson from "./DetailsPage/ApplyForPerson";
+import MyMedal from "./DetailsPage/MyMedal";
+import MyCourse from "./DetailsPage/MyCourse";
+import SignInEveryDay from "./DetailsPage/SignInEveryDay";
 
 class HeadPortraitList extends React.Component {
 
@@ -11,7 +14,7 @@ class HeadPortraitList extends React.Component {
         return <div>
 
                 <ul className="HeadPortrait-list">
-                    <Link to={``}>
+                    <Link to={`/MyMedal`}>
                         <li className="HeadPortrait-li">
                             <img className="HeadPortrait-img"
                                  src="https://image.hongbeibang.com/FpFAELJdsHHxStgBnhPdgYgGmAYo?48X48&imageView2/1/w/48/h/48"
@@ -31,22 +34,28 @@ class HeadPortraitList extends React.Component {
                                  alt=""/>
                         </li>
                     </Link>
-                    <li className="HeadPortrait-li">
-                        <img className="HeadPortrait-img"
-                             src="https://image.hongbeibang.com/Fu1OwEAsExJ20OHVI2ZqBEtLtubY?48X48&imageView2/1/w/48/h/48"
-                             alt=""/>
-                        <span className="HeadPortrait-sp">每日签到</span>
-                        <img className="HeadPortrait-i" src="https://image.hongbeibang.com/Fr2noR6eeftUXEWQp5xx3DZjUj16?94X94&imageView2/1/w/46/h/46"
-                             alt=""/>
-                    </li>
-                    <li className="HeadPortrait-li">
-                        <img className="HeadPortrait-img"
-                             src="https://image.hongbeibang.com/FnuWoFzlqjbUFcZHkVG64M-cKA_N?48X48&imageView2/1/w/48/h/48"
-                             alt=""/>
-                        <span className="HeadPortrait-sp">我的课程</span>
-                        <img className="HeadPortrait-i" src="https://image.hongbeibang.com/Fr2noR6eeftUXEWQp5xx3DZjUj16?94X94&imageView2/1/w/46/h/46"
-                             alt=""/>
-                    </li>
+
+                    <Link to={`/SignInEveryDay`}>
+                        <li className="HeadPortrait-li">
+                            <img className="HeadPortrait-img"
+                                 src="https://image.hongbeibang.com/Fu1OwEAsExJ20OHVI2ZqBEtLtubY?48X48&imageView2/1/w/48/h/48"
+                                 alt=""/>
+                            <span className="HeadPortrait-sp">每日签到</span>
+                            <img className="HeadPortrait-i" src="https://image.hongbeibang.com/Fr2noR6eeftUXEWQp5xx3DZjUj16?94X94&imageView2/1/w/46/h/46"
+                                 alt=""/>
+                        </li>
+                    </Link>
+
+                    <Link to={`/MyCourse`}>
+                        <li className="HeadPortrait-li">
+                            <img className="HeadPortrait-img"
+                                 src="https://image.hongbeibang.com/FnuWoFzlqjbUFcZHkVG64M-cKA_N?48X48&imageView2/1/w/48/h/48"
+                                 alt=""/>
+                            <span className="HeadPortrait-sp">我的课程</span>
+                            <img className="HeadPortrait-i" src="https://image.hongbeibang.com/Fr2noR6eeftUXEWQp5xx3DZjUj16?94X94&imageView2/1/w/46/h/46"
+                                 alt=""/>
+                        </li>
+                    </Link>
 
 
 

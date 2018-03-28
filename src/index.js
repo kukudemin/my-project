@@ -23,6 +23,9 @@ import WonderfulActivities from "./component/PersonalInformation/DetailsPage/Won
 import ApplyForPerson from "./component/PersonalInformation/DetailsPage/ApplyForPerson";
 import BrowseRecords from "./component/PersonalInformation/DetailsPage/BrowseRecords";
 import ExchangeTribute from "./component/PersonalInformation/DetailsPage/ExchangeTribute";
+import MyCourse from "./component/PersonalInformation/DetailsPage/MyCourse";
+import MyMedal from "./component/PersonalInformation/DetailsPage/MyMedal";
+import SignInEveryDay from "./component/PersonalInformation/DetailsPage/SignInEveryDay";
 
 
 
@@ -53,6 +56,9 @@ ReactDOM.render(<Provider store={store}>
                 <Route path='/browseRecords' component={BrowseRecords}/>
                 <Route path='/exchangeTribute' component={ExchangeTribute}/>
                 <Route path="/register" component={Register}/>
+                <Route path="/myCourse" component={MyCourse}/>
+                <Route path="/myMedal" component={MyMedal}/>
+                <Route path="/signInEveryDay" component={SignInEveryDay}/>
 
 
                 <Redirect to="/"/>
