@@ -7,12 +7,32 @@ import Recipe from "../../component/recipe/Recipe"
 class NewWorks extends React.Component{
     constructor(){
         super();
+        this.state={dataList:[]}
+    }
+    componentWillMount(){
+        let {data}=this.props;
+        let arrList=[];
+        data.forEach((item,index)=>{
+            item.allWorks.forEach((ite,i)=>{
+                arrList.push({...item,...ite})
+            })
+        });
+        this.setState({
+           dataList:[...arrList]
+       })
+
     }
     render(){
+
+  let {dataList}=this.state;
         return (
             <div>
                 <div className='recipeList'>
-                    <Recipe/>
+                    {
+                        dataList.map((item,index)=>{
+                            return <Recipe item={item} key={index}/>
+                        })
+                    }
                 </div>
             </div>
         )

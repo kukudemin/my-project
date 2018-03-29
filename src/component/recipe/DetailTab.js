@@ -9,6 +9,7 @@ class DetailTab extends React.Component{
     }
 
     render(){
+        let {} = this.props;
         return (
             <div>
                 <ul className='infoFooter2'>
@@ -25,7 +26,7 @@ class DetailTab extends React.Component{
                         <span>45</span>
                     </li>
                     <li>
-                        <div>
+                        <div ref='comment'>
                             <img src="https://image.hongbeibang.com/FiZ5-B7_rmV_gnPl97P-FkpjSlij?200X200&imageView2/1/w/38/h/38" alt=""/>
                         </div>
                         <span>45</span>

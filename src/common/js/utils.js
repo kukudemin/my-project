@@ -18,6 +18,28 @@ const utils={
             return val
         });
         return template;
-    }
+    },
+
+    aryFind(ary1,id,num,ary2){
+        return new Promise((resolve,reject)=>{
+            ary1=ary1.find((item)=>{
+                return item["id"]==id;
+            });
+            resolve(ary1);
+        }).then((resolve)=>{
+            if(ary2){
+                return resolve[ary2].find((item)=>{
+                    return item["num"]==num;
+                })
+            }else {
+                return resolve;
+            }
+        })
+    },
+    /* 解析url*/
+    urlToObj(url) {
+    url = url.split("?")[1];
+    return eval("({" + url.replace(/=/g, ":'").replace(/&/g, "',") + "'})");
+}
 };
 export default utils;
