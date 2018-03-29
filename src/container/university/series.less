@@ -14,7 +14,7 @@
     z-index: 999;
 
 
-    span {
+    span.active{
       position: relative;
       &:before {
         content: "";
@@ -31,14 +31,15 @@
     }
     .recommend {
       font-size: .17rem;
-      color: black;
+      color: #999999;
       padding: 0 .1rem;
-      font-weight: bold;
+
     }
     .series {
       font-size: .17rem;
-      color: #999999;
-      padding: 0 .1rem
+      color: black;
+      padding: 0 .1rem;
+      font-weight: bold;
     }
   }
   .seriesCon {
@@ -47,16 +48,22 @@
     position: relative;
     padding-top: .2rem;
     .imgBig {
+      position: relative;
+      &:before{
+        content:'';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .3;
+      }
       img {
         width: 100%;
         border-radius: .07rem;
-        position: relative;
-
       }
-         
-
     }
-
     .container {
       position: absolute;
       left: .1rem;
@@ -65,12 +72,10 @@
       margin: auto;
       text-align: center;
       z-index: 666;
-
-
       p {
         font-size: .16rem;
         color: #FFFFFF;
-        line-height: .15rem;
+        line-height: .17rem;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -83,12 +88,10 @@
         margin-right: .05rem;
         display: inline-block;
         margin-top: .2rem;
-
         p {
           color: #4A4945;
           text-align: center;
         }
-
       }
       span {
         font-size: .12rem;

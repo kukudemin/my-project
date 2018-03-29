@@ -11,6 +11,7 @@ import Register from "./container/Register"
 import University from "./container/University";
 import Pay from "./container/university/Pay";
 import Profile from "./container/Profile";
+
 import BZvideo from "./component/BZvideo"
 import "./common/css/reset.min.css"
 import "./common/css/public.less"
@@ -59,6 +60,7 @@ ReactDOM.render(<Provider store={store}>
                 <Route path="/signInEveryDay" component={SignInEveryDay}/>
 
                 <Redirect to="/"/>
+
             </Switch>
         </HashRouter>
     </Provider>, document.getElementById('root'));

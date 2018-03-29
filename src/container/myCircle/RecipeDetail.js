@@ -11,7 +11,7 @@ import {getNew,getOneNew} from "../../api/circle"
 import NewWorks from "./NewWorks";
 import MasterList from "./MasterList";
 import AttentionList from "./AttentionList";
-
+import Comment from "../../component/recipe/Comment"
 
 class RecipeDetail extends React.Component{
     constructor(){
@@ -19,13 +19,16 @@ class RecipeDetail extends React.Component{
         this.state={
             infoData:{
 
-            }
+            },
+            dis:"none"
         }
     }
+    handleDisplay=(dis)=>{
+        this.refs.comment.style.display=dis
+    };
     async componentWillMount(){
         console.log(this.props);
         let {match:{params:{id}}}=this.props;
-        /* 根据id 获取数据 post 请求 */
         let result =await getOneNew(id);
         result=result.find((item)=>{
             return item["id"]==id;
@@ -43,7 +46,7 @@ class RecipeDetail extends React.Component{
                 <section className='detail-header'>
                     <div className='recipe-nav'>
                           <span className='icon-fanhui' onClick={(ev)=>{
-                              history.goBack(1)
+                              history.push("/circle")
                           }}>
                         <img src={require('../../common/image/icon-fanhui.png')} alt=""/>
                           </span>
@@ -90,7 +93,12 @@ class RecipeDetail extends React.Component{
 
 
                 <section className='detailFooter'>
-                    <DetailTab/>
+                    <DetailTab countCount={remindPoint.count} comCount={comment.count} handleDisplay={this.handleDisplay} />
+                </section>
+                <section className='toComment'>
+                    <div ref="comment" style={{width:"100%",zIndex:"1000",position:"absolute",left:0,top:0,  height: "5.68rem",background:"#fff",display:"none"}}>
+                        <Comment handleDisplay={this.handleDisplay} />
+                    </div>
                 </section>
             </div>
         )

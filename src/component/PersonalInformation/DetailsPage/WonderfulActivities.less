@@ -1,21 +1,93 @@
-.WonderfulActivities-header {
-  width: 3.2rem;
-  height: .44rem;
-  position: fixed;
 
-  .WonderfulActivities-img {
-    img{
+.WonderfulActivitiesBox {
+  width: 3.2rem;
+  .WonderfulActivities-header {
+    width: 3.2rem;
+    height: .44rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #fff;
+
+    .WonderfulActivities-img {
+      img {
+        vertical-align: top;
+        margin: .1rem .15rem;
+        width: .25rem;
+        height: .25rem;
+      }
+
+    }
+    .WonderfulActivities-title {
+      display: inline-block;
+      font-size: .20rem;
       vertical-align: top;
-      margin: .1rem .15rem;
-      width: .25rem;
-      height: .25rem;
+      padding: .08rem 0 0 .5rem;
+    }
+  }
+  .WonderfulActivities-content {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    zoom: 1;
+    .Fools-gourmet {
+      width: 3.2rem;
+      height: 2.52rem;
+      background-color: #FFFFFF;
+      display: block;
+position: relative;
+      padding: .1rem .15rem .2rem .15rem;
+      box-sizing: border-box;
+      margin: 0 auto;
+      overflow: hidden;
+      .FoolsGourmet-img {
+        width: 100%;
+        border-radius: .04rem;
+        overflow: hidden;
+        font-size: 0;
+        box-sizing: border-box;
+        border: .01rem solid;
+        border-color: #E7E2E5;
+        img {
+          width: 2.88rem;
+          height: 1.44rem;
+        }
+      }
+      .FoolsGourmet-date {
+        height: .22rem;
+        line-height: .22rem;
+        margin: .1rem;
+        float: right;
+        font-size: .11rem;
+        color: #999999;
+      }
+      .FoolsGourmetRight {
+        margin: .1rem auto .5rem auto;
+        line-height: .22rem;
+        font-size: .16rem;
+        color: #4A4945;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .FoolsGourmetDescribe {
+        position: relative;
+        width: 1.82rem;
+        height: .4rem;
+        top: -.5rem;
+        left: 0;
+        float: left;
+
+        font-size: .14rem;
+        color: #999999;
+        max-height: .4rem;
+        display: block;
+      }
+
     }
 
   }
-  .WonderfulActivities-title {
-    display: inline-block;
-    font-size: .20rem;
-    vertical-align: top;
-    padding: .08rem 0 0 .5rem;
-  }
+
 }
+

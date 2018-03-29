@@ -8,6 +8,7 @@ import DetailTab from "../../component/recipe/DetailTab"
 import RecomendItem from "../../component/recipe/RecomendItem"
 import {getOneNew,cookDetail,allMaster} from "../../api/circle";
 import utils from "../../common/js/utils"
+import Comment from "../../component/recipe/Comment"
 
 class CookDetail extends React.Component{
     constructor(){
@@ -16,12 +17,15 @@ class CookDetail extends React.Component{
             cookData:{}
         }
     }
+    handleDisplay=(dis)=>{
+        this.refs.comment.style.display=dis
+    };
     async componentWillMount(){
         let obj=utils.urlToObj(this.props.location.search);
         let result =await allMaster();
        let dataInfo =await utils.aryFind(result,obj.id);
-        let resolute= await utils.aryFind(result,obj.id,obj['dishNum'],"allDish");
-        this.setState({cookData:{...resolute,author:dataInfo.author,ico:dataInfo.ico}});
+       let resolute= await utils.aryFind(result,obj.id,obj['dishNum'],"allDish");
+       this.setState({cookData:{...resolute,author:dataInfo.author,ico:dataInfo.ico}});
     }
 
     render(){
@@ -33,7 +37,7 @@ class CookDetail extends React.Component{
                 <section className='detail-headerc'>
                     <div className='cook-nav'>
                           <span className='icon-fanhui' onClick={(ev)=>{
-                              history.goBack(1)
+                              history.push('/circle/Master')
                           }}>
                         <img src={require('../../common/image/icon-fanhui.png')} alt=""/>
                           </span>
@@ -124,8 +128,14 @@ class CookDetail extends React.Component{
                 </section>
 
                 <section className='cook-footer'>
-                    <DetailTab countRed={remindPoint.count} right={comment.count}/>
+                    <DetailTab countCount={remindPoint.count} comCount={comment.count} handleDisplay={this.handleDisplay} />
+
                 </section>
+
+                    <div ref="comment" style={{width:"100%",zIndex:"10000",position:"fixed",left:0,top:0,  height: "5.68rem",background:"#fff",display:"none"}}>
+                        <Comment handleDisplay={this.handleDisplay} />
+                    </div>
+
             </div>
         )
     }
