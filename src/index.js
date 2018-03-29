@@ -60,7 +60,6 @@ ReactDOM.render(<Provider store={store}>
                 <Route path="/myMedal" component={MyMedal}/>
                 <Route path="/signInEveryDay" component={SignInEveryDay}/>
 
-
                 <Redirect to="/"/>
             </Switch>
         </HashRouter>

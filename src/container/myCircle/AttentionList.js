@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import {connect} from "react-redux"
 import Recipe from "../../component/recipe/Recipe"
 import CookBook from "../../component/recipe/CookBook"
+import "./AttentionList.less"
 
 class AttentionList extends React.Component{
     constructor(){
@@ -13,12 +14,21 @@ class AttentionList extends React.Component{
     }
 
     render(){
+        let {dataList}=this.state;
         return (
-            <div>
-                <div style={{width:'2rem',height:"3rem",textAlign:"center",margin:"0 auto",color:"#999",paddingTop:"1rem",fontSize:".20rem",}}>
-                    暂时没有关注
-                </div>
+            <div className='My-focus'>
+                {dataList.length==0?
+                    <div  className='kong' >
+                        暂时没有关注
+                    </div>: <div className='myList'>
+                        {/*  我的关注列表 */}
+                    </div>
+                }
+
+
                 {/*<CookBook/>*/}
+
+
             </div>
         )
     }
