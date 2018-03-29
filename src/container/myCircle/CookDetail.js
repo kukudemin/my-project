@@ -8,6 +8,7 @@ import DetailTab from "../../component/recipe/DetailTab"
 import RecomendItem from "../../component/recipe/RecomendItem"
 import {getOneNew,cookDetail,allMaster} from "../../api/circle";
 import utils from "../../common/js/utils"
+import Comment from "../../component/recipe/Comment"
 
 class CookDetail extends React.Component{
     constructor(){
@@ -16,30 +17,27 @@ class CookDetail extends React.Component{
             cookData:{}
         }
     }
+    handleDisplay=(dis)=>{
+        this.refs.comment.style.display=dis
+    };
     async componentWillMount(){
-        let str = this.props.location.search;
-        function urlToObj(url) {
-            url = url.split("?")[1];
-            return eval("({" + url.replace(/=/g, ":'").replace(/&/g, "',") + "'})");
-        }
-        let obj=urlToObj(this.props.location.search);
-        let result =await allMaster();//所有的shipu数据;
-       let dataInfo =  result.filter((item)=>{ return item.id===obj.id});
-        console.log(dataInfo);
-        let resolute= await utils.aryFind(result,obj.id,obj['dishNum'],"allDish");
-        this.setState({cookData:{...resolute}});
+        let obj=utils.urlToObj(this.props.location.search);
+        let result =await allMaster();
+       let dataInfo =await utils.aryFind(result,obj.id);
+       let resolute= await utils.aryFind(result,obj.id,obj['dishNum'],"allDish");
+       this.setState({cookData:{...resolute,author:dataInfo.author,ico:dataInfo.ico}});
     }
 
     render(){
         let {history}=this.props;
-        let {num,title,img,introduce,ingredient=[],steps=[],remindPoint={"data":[]},tips,comment=[]}=this.state.cookData;
+        let {author,ico,num,title,img,introduce,ingredient=[],steps=[],remindPoint={"data":[]},tips,comment={"data":[]}}=this.state.cookData;
 
         return (
             <div className='cookDetail'>
                 <section className='detail-headerc'>
                     <div className='cook-nav'>
                           <span className='icon-fanhui' onClick={(ev)=>{
-                              history.goBack(1)
+                              history.push('/circle/Master')
                           }}>
                         <img src={require('../../common/image/icon-fanhui.png')} alt=""/>
                           </span>
@@ -53,7 +51,7 @@ class CookDetail extends React.Component{
                         </div>
                     <div className='cookContent'>
                         <p className='title'>{title}</p>
-                         <GerenInfo/>
+                         <GerenInfo author={author} ico={ico} />
                         <p className='coDetail-text'>
                             {introduce}
                         </p>
@@ -78,7 +76,7 @@ class CookDetail extends React.Component{
                                             return (
                                                 <p  className='hang' key={ind}>
                                                     <span className='left'>{key}</span>
-                                                    <span className='right'>{item.key}</span>
+                                                    <span className='right'>{item[key]}</span>
                                                 </p>
                                             )
                                         }
@@ -119,7 +117,7 @@ class CookDetail extends React.Component{
                             }}/>
                             <Route from="/cookDetail/comment" exact  component={()=>{
                                 return <div>
-                                    { remindPoint.data.map((item,index)=>{
+                                    { comment.data.map((item,index)=>{
                                         return  <RecomendItem bottomList='comment' data={item} key={index}/>
                                     })}
 
@@ -130,8 +128,14 @@ class CookDetail extends React.Component{
                 </section>
 
                 <section className='cook-footer'>
-                    <DetailTab/>
+                    <DetailTab countCount={remindPoint.count} comCount={comment.count} handleDisplay={this.handleDisplay} />
+
                 </section>
+
+                    <div ref="comment" style={{width:"100%",zIndex:"10000",position:"fixed",left:0,top:0,  height: "5.68rem",background:"#fff",display:"none"}}>
+                        <Comment handleDisplay={this.handleDisplay} />
+                    </div>
+
             </div>
         )
     }

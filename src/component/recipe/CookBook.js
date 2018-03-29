@@ -55,16 +55,18 @@ class CookBook extends React.Component{
                         <span>{remindPoint.count}</span>
                     </li>
                     <li>
-                        <div>
-                            <img src="https://image.hongbeibang.com/Fi6E0gsACPeVV5_xgH5JBn6PN45m?200X200&imageView2/1/w/38/h/38" alt=""/>
-                        </div>
-                        <span>45</span>
+                            <div>
+                                <img src="https://image.hongbeibang.com/Fi6E0gsACPeVV5_xgH5JBn6PN45m?200X200&imageView2/1/w/38/h/38" alt=""/>
+                            </div>
+                            <span>45</span>
                     </li>
                     <li>
-                        <div>
-                            <img src="https://image.hongbeibang.com/FiZ5-B7_rmV_gnPl97P-FkpjSlij?200X200&imageView2/1/w/38/h/38" alt=""/>
-                        </div>
-                        <span>{comment.count}</span>
+                        <Link to={`/cookDetail?id=${id}&dishNum=${num}`}>
+                            <div>
+                                <img src="https://image.hongbeibang.com/FiZ5-B7_rmV_gnPl97P-FkpjSlij?200X200&imageView2/1/w/38/h/38" alt=""/>
+                            </div>
+                            <span>{comment.count}</span>
+                        </Link>
                     </li>
                 </ul>
 

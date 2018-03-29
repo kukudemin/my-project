@@ -9,6 +9,7 @@ class GerenInfo extends React.Component{
     }
 
     render(){
+        let {author,ico} =this.props;
         return (
             <div className='GerenInfo'>
                 <a className='infoLink'>
@@ -17,7 +18,7 @@ class GerenInfo extends React.Component{
                             <img src="https://image.hongbeibang.com/Fr_moz4Z7GkZTjZ-K5qNSBjIXtSu?132X132&imageView2/1/w/80/h/80" alt=""/>
                         </div>
                         <div className='infoRight'>
-                            <p className='userName'><img  className='masterIcon' src={require("../../common/image/icon-master.png")} alt=""/>小小小鸟
+                            <p className='userName'><img  className='masterIcon' src={require("../../common/image/icon-master.png")} alt=""/>{author}
                             </p>
                             <button className='focus'>+ 关注</button>
                         </div>

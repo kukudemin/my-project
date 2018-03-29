@@ -24,12 +24,14 @@ route.post("/list",async function (req,res) {
 route.get('/detail',async function (req,res) {
     let {id,dishNum}=req.query;
     let data=await utils.readJSON("userData.json");
-    let resolute=data.persons.find((item)=>{
+    /*let resolute=data.persons.find((item)=>{
         return item.id==id;
     }).allDish.find((item)=>{
         return item.num==dishNum;
-    });
-    /* let resolute= await utils.aryFind(data.persons,id,dishNum,"allDish");*/
+    });*/
+    let dataInfo =await utils.aryFind(data.persons,id);
+     let resolute= await utils.aryFind(data.persons,id,dishNum,"allDish");
+    resolute={...resolute,author:dataInfo.author,ico:dataInfo.ico};
     res.send(resolute);
 });
 

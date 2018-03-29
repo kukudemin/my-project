@@ -81,8 +81,8 @@ class Home extends React.Component{
                 <div className="HomeList">
                     {
                         homeData.map((item,index)=>{
-                            console.log(item.id);
-                            return <Link to={`/cookDetail`} key={index}>
+                           // console.log(item.id);
+                            return <Link to={`/cookDetail?id=${item.id}&dishNum=${1}`} key={index}>
                                 <div  className="list-Item" >
                                     <div className="list-Img"><img src={item.allDish[index].img} alt=""/></div>
                                     <div className="list-icon">
