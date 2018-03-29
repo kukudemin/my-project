@@ -76,9 +76,11 @@ class Recipe extends React.Component{
                         <span>打赏</span>
                     </li>
                     <li>
-                        <div>
-                            <img src="https://image.hongbeibang.com/FiZ5-B7_rmV_gnPl97P-FkpjSlij?200X200&imageView2/1/w/38/h/38" alt=""/>
-                        </div>
+                        <Link to={`/recipeDetail/${id+''}`} >
+                            <div>
+                                <img src="https://image.hongbeibang.com/FiZ5-B7_rmV_gnPl97P-FkpjSlij?200X200&imageView2/1/w/38/h/38" alt=""/>
+                            </div>
+                        </Link>
                         <span>{comment.count}</span>
                     </li>
                 </ul>}
