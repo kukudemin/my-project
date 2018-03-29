@@ -1,9 +1,7 @@
 
-
-
 import React, {Component} from 'react';
-
 import "./Login.less"
+import {connect} from "react-redux"
 import fetch from 'isomorphic-fetch';
 import {Link} from 'react-router-dom';
 import {login} from '../api/profile';
@@ -11,42 +9,10 @@ import {login} from '../api/profile';
 class Login extends Component {
     constructor(props) {
         super(props);
-        this.state = { // 初始化state
-            username: '',
-            password: '',
-            value: ""
-        }
     }
 
-    stateChange(e) {
-        const target = e.target;
-        this.setState({
-            [target.name]: target.value
-        })
-    }
-
-    saveUser() {
-        const {
-            username,
-            password
-        } = this.state;
-        if (!username) return alert('用户名不能为空');
-        if (!password) return alert('密码不能为空');
-        fetch('http://123.206.99.172:3005/reg', {
-            method: 'GET',
-            mode: "cors",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: {username, password}
-        }).then(res => res.json()).then(res => {
-            // 成功, 处理逻辑
-            alert('恭喜您注册成功了');
-        })
-    }
 
     render() {
-        let {username, password} = this.state;
         return (
          <div className="register">
              <div className="register-empty">&nbsp;</div>
@@ -91,4 +57,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default connect()(Login);
