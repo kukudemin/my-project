@@ -19,8 +19,8 @@ route.get('/list',(req,res)=>{
     res.send(data);
 });*/
 route.get('/detail',async (req,res)=>{
-    let {id,num}=req.query;
-    let data=await utils.aryFind(req.resolve,id,num,"course");
+    let {id}=req.query;
+    let data=await utils.aryFind(req.resolve,id,"course");
     res.send(data);
 });
 

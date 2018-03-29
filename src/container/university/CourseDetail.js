@@ -1,18 +1,32 @@
 import React,{Component} from "react"
 import PropTypes from 'prop-types';
 import './CourseDetail.less'
+import {courseList} from "../../api/university";
 
 export default class CourseDetail extends Component{
     constructor(){
         super();
+        this.state={
+            data:[]
+        }
+    }
+    async componentWillMount() {
+        let result = await courseList();
+        this.setState({
+            data: result
+        });
+        console.log(this.state.data);
     }
 
     render(){
+        let {data}=this.state;
         return (
             <div className='courseDetail'>
-                <a href="" className='course clearfix'>
+                <a className='course clearfix'>
                     <h1>
-                        <img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" alt=""/>
+                        <img onClick={ev=>{
+                            this.props.history.goBack()
+                        }} src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" alt=""/>
                         失败戚风蛋糕
                     </h1>
                     <div className='container clearfix'>
@@ -40,46 +54,30 @@ export default class CourseDetail extends Component{
                     <h3 className='course'>课程介绍</h3>
                     <p>创意火锅蛋糕+生巧克力+香蕉抱抱蛋糕+台湾肉松拔丝蛋糕！</p>
 
-                    <div className='courseCon'>
-                        <img src="https://image.hongbeibang.com/FvtZnjrBhJobFPQg7bAWG30JXtNe?1181X787&imageView2/1/w/400/h/236" alt=""/>
-                        <div className="courseText">
-                            <h4>创意火锅蛋糕</h4>
-                            <p>专科班（入门必学）</p>
-                            <p>2017-04-21 15:12:00</p>
-                            <p>43人报名</p>
 
-                        </div>
-                    </div>
-                    <div className='courseCon'>
-                        <img src="https://image.hongbeibang.com/FvtZnjrBhJobFPQg7bAWG30JXtNe?1181X787&imageView2/1/w/400/h/236" alt=""/>
-                        <div className="courseText">
-                            <h4>创意火锅蛋糕</h4>
-                            <p>专科班（入门必学）</p>
-                            <p>2017-04-21 15:12:00</p>
-                            <p>43人报名</p>
+                    {
+                        data.map((item,index)=>{
+                           return  <div className='courseCon' key={index} onClick={event => {
+                               this.props.history.push(`/pay`);
+                               localStorage.universityId = item.id;
+                           }}>
+                               <img src={item.img} alt=""/>
+                               <div className="courseText">
+                                   <h4>{item.title}</h4>
+                                   <p>{item.type}</p>
+                                   <p>{item.time}</p>
+                                   <p>{item.hot}</p>
 
-                        </div>
-                    </div>
-                    <div className='courseCon'>
-                        <img src="https://image.hongbeibang.com/FvtZnjrBhJobFPQg7bAWG30JXtNe?1181X787&imageView2/1/w/400/h/236" alt=""/>
-                        <div className="courseText">
-                            <h4>创意火锅蛋糕</h4>
-                            <p>专科班（入门必学）</p>
-                            <p>2017-04-21 15:12:00</p>
-                            <p>43人报名</p>
+                               </div>
+                           </div>
+                        })
+                    }
 
-                        </div>
-                    </div>
-                    <div className='courseCon'>
-                        <img src="https://image.hongbeibang.com/FvtZnjrBhJobFPQg7bAWG30JXtNe?1181X787&imageView2/1/w/400/h/236" alt=""/>
-                        <div className="courseText">
-                            <h4>创意火锅蛋糕</h4>
-                            <p>专科班（入门必学）</p>
-                            <p>2017-04-21 15:12:00</p>
-                            <p>43人报名</p>
 
-                        </div>
-                    </div>
+
+
+
+
                 </a>
 
                 <div className='subFooter'>
