@@ -11,15 +11,19 @@ export default class Series extends Component{
         return (
             <div className='series'>
                 <div className='text'>
-                    <a href="" >
+                    <a onClick={ev=>{
+                        this.props.history.push(`/university`);
+                    }}>
                         <span className='recommend'>推荐</span>
                     </a>
-                    <a href="" >
-                        <span className='series'>系列</span>
+                    <a>
+                        <span className='series active' >系列</span>
                     </a>
                 </div>
                 <div className='seriesCon'>
-                    <a href="">
+                    <a onClick={ev=>{
+                        this.props.history.push('/courseDetail')
+                    }}>
                         <div className='imgBig'>
                             <img src="https://image.hongbeibang.com/FvtZnjrBhJobFPQg7bAWG30JXtNe?1181X787&imageView2/1/w/750/h/429" alt=""/>
                         </div>
@@ -33,8 +37,11 @@ export default class Series extends Component{
                         </div>
                     </a>
                 </div>
+
                 <div className='seriesCon'>
-                    <a href="">
+                    <a onClick={ev=>{
+                        this.props.history.push('/courseDetail')
+                    }}>
                         <div className='imgBig'>
                             <img src="https://image.hongbeibang.com/FvtZnjrBhJobFPQg7bAWG30JXtNe?1181X787&imageView2/1/w/750/h/429" alt=""/>
                         </div>
