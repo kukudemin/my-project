@@ -8,13 +8,17 @@ import "./Home.less"
 import {queryBanner,getStar} from "../api/home";
 import action from "../store/action";
 
+
 class Home extends React.Component{
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
             bannerData:{},
-            data:[],
+            navData:[],
+            ary:[],
+            start: 0,
+            more:"加载更多"
         }
     }
 
@@ -23,20 +27,35 @@ class Home extends React.Component{
         this.setState({
             bannerData:result
         });
-        let data=await getStar();
+        let navData=await getStar();
         this.setState({
-            data
+            navData
         });
 
         let {homeData,getHomeList}=this.props;
         if (homeData&&homeData.length===0) {
-            getHomeList()
+            this.props.getHomeList()
         }
     }
+    componentWillUpdate(nextProps,nextState){
+        if (nextState.ary.length===0 && nextProps.homeData.length > 0){
+            this.change()
+        }
+    }
+    componentDidUpdate(){
+        if (this.state.start==this.props.homeData.length-2){
+            this.state.more="没有更多"
+        }
+    }
+    change=()=>{
+        console.log(this.state.start);
+        let start = this.state.start;
+        let res = this.props.homeData.slice(start,start+2) || [];
+        this.setState({ary:[...this.state.ary,...res],start: start+2})
+    };
     render(){
         let {homeData}=this.props;
-        let {data}=this.state;
-
+        let {navData,ary}=this.state;
         return <div>
             <section className="navContainer">
                 <div className="header">
@@ -66,7 +85,7 @@ class Home extends React.Component{
                         <div className="starList">
                             <ul>
                                 {
-                                    data.map((item,index)=>{
+                                    navData.map((item,index)=>{
                                         return <li key={index}>
                                             <div><img src={item.clientImage} alt=""/></div>
                                             <h4>{item.clientName}</h4>
@@ -80,23 +99,23 @@ class Home extends React.Component{
                 </div>
                 <div className="HomeList">
                     {
-                        homeData.map((item,index)=>{
-                            console.log(item.id);
+                        ary.map((item,index)=>{
                             return <Link to={`/cookDetail?id=${item.id}&dishNum=${1}`} key={index}>
                                 <div  className="list-Item" >
-                                    <div className="list-Img"><img src={item.allDish[index].img} alt=""/></div>
+                                    <div className="list-Img"><img src={item.allDish[1].img} alt=""/></div>
                                     <div className="list-icon">
                                         <div className="icon-top"><img src={item.icon} alt=""/></div>
                                         <div className="icon-bottom"><img src={require("../common/image/达人.png")} alt=""/>{item.author}</div>
                                     </div>
                                     <div className="list-text">
-                                        <h2>{item.allDish[index].title}</h2>
-                                        <p>{item.allDish[index].introduce}</p>
+                                        <h2>{item.allDish[1].title}</h2>
+                                        <p>{item.allDish[1].introduce}</p>
                                     </div>
                                 </div>
                             </Link>
                         })
                     }
+                    <p onClick={this.change}>{this.state.more}</p>
                 </div>
             </section>
             <section className="footerContainer">

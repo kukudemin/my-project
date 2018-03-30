@@ -3,20 +3,26 @@ import PropTypes from "prop-types"
 import {connect} from "react-redux"
 import {Link,NavLink} from  "react-router-dom"
 import "./Recipe.less"
+import action from "../../store/action/index"
 
 class Recipe extends React.Component{
-    constructor(){
-        super();
-
+    constructor(props){
+        super(props);
+        this.state={
+          countData:this.props.MyData
+        }
     }
+   componentWillMount(){
+      // this.props.dianZan(this.props.alldataList);//
+       console.log("alldataList",this.props);
+   }
 
     render(){
-        let {item} =this.props;
-        let {id,
-            icon='',author,
-            createTime='2017-01-02',title='',description='',imgList=[],reMark='',isRemind=0,isComment=0,isCollected=0,remindPoint=[],comment=[]}=item;
+        //console.log(this.props);
+        let {item,index} =this.props;
+         item={...item,index};
+        let {id, icon='',author, createTime='2017-01-02',title='',description='',imgList=[],reMark='',isRemind=0,isComment=0,isCollected=0,remindPoint=[],comment=[]}=item;
        // console.log(id);
-
 
         return (
             <div className='recipe-item'>
@@ -53,7 +59,6 @@ class Recipe extends React.Component{
 
                         })}
                     </div>
-
                 </Link>
 
                 {/*点赞 评论*/}
@@ -63,9 +68,15 @@ class Recipe extends React.Component{
                         <span className='footerSearch'>搜索食谱 ></span>
                     </div>:
                     <ul className='infoFooter'>
-                    <li>
+                    <li >
                         <div>
-                            <img src="https://image.hongbeibang.com/Fqv9VBHXG627znbKlZYnHQMTHVdc?200X200&imageView2/1/w/38/h/38" alt=""/>
+                            <img index={id} ref="img" src="https://image.hongbeibang.com/Fqv9VBHXG627znbKlZYnHQMTHVdc?200X200&imageView2/1/w/38/h/38" alt="" onClick={(ev)=>{
+                               // this.props.dianZan(remindPoint.count,12);
+                                let targetIndex=this.refs.img.getAttribute('index');//当前点击的index:id
+                                console.log(targetIndex);
+
+
+                            }}/>
                         </div>
                         <span>{remindPoint.count}</span>
                     </li>
@@ -76,9 +87,11 @@ class Recipe extends React.Component{
                         <span>打赏</span>
                     </li>
                     <li>
-                        <div>
-                            <img src="https://image.hongbeibang.com/FiZ5-B7_rmV_gnPl97P-FkpjSlij?200X200&imageView2/1/w/38/h/38" alt=""/>
-                        </div>
+                        <Link to={`/recipeDetail/${id+''}`} >
+                            <div>
+                                <img src="https://image.hongbeibang.com/FiZ5-B7_rmV_gnPl97P-FkpjSlij?200X200&imageView2/1/w/38/h/38" alt=""/>
+                            </div>
+                        </Link>
                         <span>{comment.count}</span>
                     </li>
                 </ul>}
@@ -88,4 +101,4 @@ class Recipe extends React.Component{
         )
     }
 }
-export default connect()(Recipe)
+export default connect((state)=>({...state.zan}),action.dianZan)(Recipe)

@@ -38,6 +38,7 @@ app.use('/show',require("./router/show"));
 app.use('/question',require("./router/question"));
 app.use('/circle',require("./router/circle"));
 app.use('/profile',require("./router/profile"));
+app.use('/search',require("./router/search"));
 
 
 

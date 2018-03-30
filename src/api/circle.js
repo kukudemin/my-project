@@ -19,3 +19,8 @@ export function allMaster() {
 export function cookDetail(id,dishNum) {
     return axios.get('/circle/detail',id,dishNum);
 }
+
+/*   点赞传递参数 第几认的第几个食谱  我的信息: 用户名头像  */
+export function cookZan(id,dishNum,imgMy,nameMy) {
+    return axios.post('/circle/detail',id,dishNum,imgMy,nameMy);
+}
