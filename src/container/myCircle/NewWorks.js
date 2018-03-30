@@ -30,7 +30,7 @@ class NewWorks extends React.Component{
                 <div className='recipeList'>
                     {
                         dataList.map((item,index)=>{
-                            return <Recipe item={item} key={index}/>
+                            return <Recipe item={item} key={index} index={index} alldataList={dataList}/>
                         })
                     }
                 </div>

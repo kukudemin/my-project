@@ -6,9 +6,11 @@ import "./CookDetail.less"
 import GerenInfo from "../../component/recipe/GerenInfo"
 import DetailTab from "../../component/recipe/DetailTab"
 import RecomendItem from "../../component/recipe/RecomendItem"
-import {getOneNew,cookDetail,allMaster} from "../../api/circle";
+import {getOneNew,cookDetail,allMaster,cookZan} from "../../api/circle";
 import utils from "../../common/js/utils"
 import Comment from "../../component/recipe/Comment"
+import action from "../../store/action/index"
+import {isLogin, info} from '../../api/profile';
 
 class CookDetail extends React.Component{
     constructor(){
@@ -20,18 +22,48 @@ class CookDetail extends React.Component{
     handleDisplay=(dis)=>{
         this.refs.comment.style.display=dis
     };
+   handZan= async (num)=>{
+       //console.log(num);
+       let loginId = await isLogin();
+       loginId = Number(loginId);
+       if (isNaN(loginId) || loginId === 0) {
+           //=>没登录,跳转到登录页面
+           this.props.history.push('/login');
+           return;
+       }
+            /* 已经登录 获取登录id 从所有数据中获取登录用户的同户名,密码*/
+            let resultInfo =await allMaster();
+            let myInfo =await utils.aryFind(resultInfo,loginId);
+
+       let redcou= this.props.MyData.remindPoint
+       redcou.count=parseInt(redcou.count)+1;
+       redcou.data=[{clientName:myInfo.author,img:myInfo.icon},...redcou.data];
+       this.setState({cookData:this.props.MyData});
+
+       //更新服务器的数据  传递id num ,个人信息 : 头像,用户名,
+       let obj=utils.urlToObj(this.props.location.search);//{id.num}
+        cookZan(loginId,obj['dishNum'] ,myInfo.icon,myInfo.author);
+        console.log(this.props);
+    };
+
     async componentWillMount(){
+/*   bug: 页面刷新或是报错时就找不到id,和num了, 要 存一个缓存
+ http://localhost:3000/#/cookDetail?id=1&dishNum=1*/
         let obj=utils.urlToObj(this.props.location.search);
         let result =await allMaster();
        let dataInfo =await utils.aryFind(result,obj.id);
        let resolute= await utils.aryFind(result,obj.id,obj['dishNum'],"allDish");
-       this.setState({cookData:{...resolute,author:dataInfo.author,ico:dataInfo.ico}});
+       let data={...resolute,author:dataInfo.author,ico:dataInfo.ico};
+       this.props.dianZan(data);
+       this.setState({cookData:data});
     }
 
     render(){
         let {history}=this.props;
-        let {author,ico,num,title,img,introduce,ingredient=[],steps=[],remindPoint={"data":[]},tips,comment={"data":[]}}=this.state.cookData;
+        console.log(this.props);
+        let {author='',ico='',num='',title='',img='',introduce='',ingredient=[],steps=[],remindPoint={"data":[]},tips='',comment={"data":[]}}=this.state.cookData;
 
+        console.log(this.props);
         return (
             <div className='cookDetail'>
                 <section className='detail-headerc'>
@@ -60,9 +92,15 @@ class CookDetail extends React.Component{
                                <div className='inputNum-con'>
                                    <span>分量</span>
                                    <div className='middle'>
-                                       <span>-</span>
-                                       <input type="number" className='input' value='5' onChange={()=>{}}/>
-                                       <span>+</span>
+                                       <span onClick={(ev)=>{
+
+                                       }}>-</span>
+                                       <input type="number" className='input' value='5' onChange={()=>{
+
+                                       }}/>
+                                       <span onClick={(ev)=>{
+
+                                       }}>+</span>
                                    </div>
                                    <span>份</span>
                                </div>
@@ -128,7 +166,7 @@ class CookDetail extends React.Component{
                 </section>
 
                 <section className='cook-footer'>
-                    <DetailTab countCount={remindPoint.count} comCount={comment.count} handleDisplay={this.handleDisplay} />
+                    <DetailTab countCount={remindPoint.count} comCount={comment.count} handleDisplay={this.handleDisplay} handZan={this.handZan}/>
 
                 </section>
 
@@ -140,4 +178,4 @@ class CookDetail extends React.Component{
         )
     }
 }
-export default withRouter(connect()(CookDetail))
+export default withRouter(connect((state)=>({...state.zan}),action.dianZan)(CookDetail))

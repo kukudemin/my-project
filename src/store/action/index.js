@@ -1,6 +1,8 @@
 import homeAction from "./home"
+import zanAction from "./circle"
 
 const action={
-    home:homeAction
+    home:homeAction,
+    dianZan:zanAction
 };
 export default action
