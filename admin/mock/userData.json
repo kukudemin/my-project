@@ -884,8 +884,13 @@
         "isComment":false,
         "isCollected":false,
         "remindPoint":{
-          "count":2,
+          "count":3,
           "data":[
+            {
+              "clientName":"那年花开",
+              "remindTime":"2017-12-20 16:03:47",
+              "img":"https://image.hongbeibang.com/FvsoaY9aRllevzdC08Pe60Lxs9wy?960X1280&imageView2/1/w/80/h/80"
+            },
             {
               "clientName":"那年花开",
               "remindTime":"2017-12-20 16:03:47",

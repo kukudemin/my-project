@@ -13,6 +13,8 @@ import MasterList from "./MasterList";
 import AttentionList from "./AttentionList";
 import Comment from "../../component/recipe/Comment"
 
+
+
 class RecipeDetail extends React.Component{
     constructor(){
         super();
@@ -26,10 +28,13 @@ class RecipeDetail extends React.Component{
     handleDisplay=(dis)=>{
         this.refs.comment.style.display=dis
     };
+    handZan=(num)=>{
+
+    };
     async componentWillMount(){
         console.log(this.props);
         let {match:{params:{id}}}=this.props;
-        let result =await getOneNew(id);
+        let result =await getOneNew();//get    post
         result=result.find((item)=>{
             return item["id"]==id;
         });
@@ -58,7 +63,7 @@ class RecipeDetail extends React.Component{
                 <section className='detail-content'>
                     <button className='focus'>+ 关注</button>
 
-                    <Recipe list='detail' item={this.state.infoData}/>
+                    <Recipe list='detail' item={this.state.infoData} />
 
                     <div className='nav'>
                         <NavLink to='/recipeDetail'  exact  activeClassName='activeMy'>点赞 {remindPoint.count}</NavLink>
@@ -93,7 +98,7 @@ class RecipeDetail extends React.Component{
 
 
                 <section className='detailFooter'>
-                    <DetailTab countCount={remindPoint.count} comCount={comment.count} handleDisplay={this.handleDisplay} />
+                    <DetailTab countCount={remindPoint.count} comCount={comment.count} handleDisplay={this.handleDisplay} handZan={this.handZan}/>
                 </section>
                 <section className='toComment'>
                     <div ref="comment" style={{width:"100%",zIndex:"1000",position:"absolute",left:0,top:0,  height: "5.68rem",background:"#fff",display:"none"}}>

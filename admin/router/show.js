@@ -18,6 +18,7 @@ route.get("/list",function (req,res) {
 route.post("/list",async function (req,res) {
     let {id}=req.body;
     let data=await utils.aryFind(req.resolve,id);
+    /*  */
     res.send(data);
 });
 
