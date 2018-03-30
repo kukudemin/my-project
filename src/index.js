@@ -28,7 +28,7 @@ import MyCourse from "./component/PersonalInformation/DetailsPage/MyCourse";
 import MyMedal from "./component/PersonalInformation/DetailsPage/MyMedal";
 import SignInEveryDay from "./component/PersonalInformation/DetailsPage/SignInEveryDay";
 
-
+import Fu from "./container/university/Fu";
 
 
 
@@ -58,6 +58,7 @@ ReactDOM.render(<Provider store={store}>
                 <Route path="/myCourse" component={MyCourse}/>
                 <Route path="/myMedal" component={MyMedal}/>
                 <Route path="/signInEveryDay" component={SignInEveryDay}/>
+                <Route path="/fu" component={Fu}/>
 
                 <Redirect to="/"/>
 
