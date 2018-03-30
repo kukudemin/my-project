@@ -16,13 +16,14 @@ route.post("/login",(req,res)=>{
         return (item.userName===userName)&&(item.pw===pw);
     });
     if(info){
-       req.session.userId=info.id;
+        console.log(info);
+        req.session.userId=info.id;
        res.send("登录成功");
     }else {
         res.send("账号或者密码不对");
     }
-    req.session.loginID = info['id'];
-    res.send('success');
+   /* req.session.loginID = info['id'];
+    res.send('success');*/
 });
 route.get("/login",(req,res)=>{
     res.send(req.session.userId+""||"0");
