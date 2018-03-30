@@ -8,13 +8,14 @@ import "./Home.less"
 import {queryBanner,getStar} from "../api/home";
 import action from "../store/action";
 
+
 class Home extends React.Component{
 
     constructor(){
         super();
         this.state={
             bannerData:{},
-            data:[],
+            navData:[],
         }
     }
 
@@ -23,19 +24,19 @@ class Home extends React.Component{
         this.setState({
             bannerData:result
         });
-        let data=await getStar();
+        let navData=await getStar();
         this.setState({
-            data
+            navData
         });
 
         let {homeData,getHomeList}=this.props;
         if (homeData&&homeData.length===0) {
-            getHomeList()
+            this.props.getHomeList()
         }
     }
     render(){
         let {homeData}=this.props;
-        let {data}=this.state;
+        let {navData}=this.state;
 
         return <div>
             <section className="navContainer">
@@ -66,7 +67,7 @@ class Home extends React.Component{
                         <div className="starList">
                             <ul>
                                 {
-                                    data.map((item,index)=>{
+                                    navData.map((item,index)=>{
                                         return <li key={index}>
                                             <div><img src={item.clientImage} alt=""/></div>
                                             <h4>{item.clientName}</h4>
@@ -81,7 +82,6 @@ class Home extends React.Component{
                 <div className="HomeList">
                     {
                         homeData.map((item,index)=>{
-                           // console.log(item.id);
                             return <Link to={`/cookDetail?id=${item.id}&dishNum=${1}`} key={index}>
                                 <div  className="list-Item" >
                                     <div className="list-Img"><img src={item.allDish[index].img} alt=""/></div>

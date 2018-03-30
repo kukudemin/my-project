@@ -36,7 +36,7 @@ componentWillMount(){
                         <div>
                             <img src="https://image.hongbeibang.com/Fqv9VBHXG627znbKlZYnHQMTHVdc?200X200&imageView2/1/w/38/h/38" alt=""
                                  onClick={ async (ev)=>{
-                                   
+
                                     this.handNum();
                                  }}
                             />
