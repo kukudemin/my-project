@@ -38,21 +38,20 @@ route.get('/detail',async function (req,res) {
 
 route.post('/detail',async function (req,res) {
     /*  传递id num ,个人信息 : 头像,用户名,  */
-    let {id,dishNum ,img,clientName}=req.query;
+    let {id,dishNum,img,clientName}=req.body;
     let data=await utils.readJSON("userData.json");
 
     let dataInfo =await utils.aryFind(data.persons,id);
     let resolute= await utils.aryFind(data.persons,id,dishNum,"allDish");
-    resolute={...resolute,author:dataInfo.author,ico:dataInfo.ico};
+   /* resolute={...resolute,author:dataInfo.author,ico:dataInfo.ico};*/
     /*  修改数据条数  */
     resolute.remindPoint.count=parseInt(resolute.remindPoint.count)+1;
     /* 传递参数和头像 */  /*  重新写入文件  刷新或是重新登录时可以看到   */
     resolute.remindPoint.data=[{clientName:clientName,img:img},...resolute.remindPoint.data];
-
-
-    utils.writeJSON(  )
-
-    res.send(resolute);
+    dataInfo.allDish[dishNum].remindPoint=resolute.remindPoint;
+    data.persons[id]=dataInfo;
+    utils.writeJSON(data,"userData.json");
+    res.send("success");
 });
 
 module.exports=route;

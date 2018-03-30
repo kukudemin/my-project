@@ -30,7 +30,7 @@ async componentWillMount(){
                         this.props.history.goBack();
                     }}>返回</span>
                     <input className="inp" type="text" ref="inp" value={key} onChange={()=>{
-
+                        getResolute()
                     }}/>
                     <select name="search" id="">
                         <option value="食谱">食谱</option>
