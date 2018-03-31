@@ -10,7 +10,6 @@ route.use(async function (req,res,next) {
 
 route.get("/detail",function (req,res) {
     let {type,key}=req.query;
-    console.log(key);
     if(type==="dish"){
         let ary=req.dish.persons;
         let ary1=[];

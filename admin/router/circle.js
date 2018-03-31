@@ -53,5 +53,22 @@ route.post('/detail',async function (req,res) {
     utils.writeJSON(data,"userData.json");
     res.send("success");
 });
+/* 阳
+route.post('/detail/comment',async function (req,res) {
+    let MyData=req.body;
+    /!* comment 是*!/
+    let {id,dishNum ,comment}=req.body;
+    let data=await utils.readJSON("userData.json");
+    let dataInfo =await utils.aryFind(data.persons,id);
+    let resolute= await utils.aryFind(data.persons,id,dishNum,"allDish");
+    resolute.comment.count=parseInt(resolute.comment.count)+1;
+    resolute.comment.data.push(comment);
+    dataInfo.allDish[dishNum].comment=resolute.comment;
+    data.persons[id-1]=dataInfo;
+    utils.writeJSON(data,"userData.json");
+    res.send("success");
+});
+*/
+
 
 module.exports=route;

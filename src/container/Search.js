@@ -39,7 +39,9 @@ class Search extends React.Component{
                     <section className="row">
                         <p>热门搜索</p>
                         <ul onClick={(e)=>{
-                            this.props.history.push(`/search/detail/${e.target.innerText}`);
+                           if(e.target.tagName==="LI"){
+                               this.props.history.push(`/search/detail/${e.target.innerText}`);
+                           }
                         }}>
                             <li>蛋挞</li>
                             <li >蛋糕</li>

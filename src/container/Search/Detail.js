@@ -65,7 +65,6 @@ async componentWillMount(){
                         });
                     }}>
                         <option value="食谱">食谱</option>
-                        <option value="达人">达人</option>
                         <option value="问答">问答</option>
                     </select>
                 </section>
@@ -80,7 +79,6 @@ async componentWillMount(){
 
                                 break;
                             case 2:
-
                                 break;
                             case 3:
 

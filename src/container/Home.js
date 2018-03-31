@@ -69,7 +69,7 @@ class Home extends React.Component{
                 <div className="search">
                     <div>
                         <span><img src={require("../common/image/放大镜.png")} alt=""/></span>
-                        <span>搜索食谱、材料、达人</span>
+                        <Link to="/search">搜索食谱、材料、达人</Link>
                     </div>
                 </div>
                 <nav>
