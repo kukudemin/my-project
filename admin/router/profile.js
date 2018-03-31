@@ -2,13 +2,14 @@ let express=require("express"),
     route=express.Router(),
     utils=require("./utils");
 
+let md5 = require('blueimp-md5');
+
 route.use(function (req,res,next) {
     utils.readJSON("LoginData.json").then(resolve=>{
         req.num=resolve.num;
         req.data=resolve.data;
         next();
     });
-
 });
 route.post("/login",(req,res)=>{
     let {userName,pw}=req.body;
@@ -16,15 +17,16 @@ route.post("/login",(req,res)=>{
         return (item.userName===userName)&&(item.pw===pw);
     });
     if(info){
-        console.log(info);
         req.session.userId=info.id;
+        req.session.loginID = info['id'];
+       // res.send('success');
        res.send("登录成功");
     }else {
         res.send("账号或者密码不对");
     }
-   /* req.session.loginID = info['id'];
-    res.send('success');*/
 });
+
+
 route.get("/login",(req,res)=>{
     res.send(req.session.userId+""||"0");
 });

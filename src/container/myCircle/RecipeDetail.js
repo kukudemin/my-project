@@ -40,7 +40,7 @@ class RecipeDetail extends React.Component{
         });
         result={...result,...result.allWorks[0]};
         this.setState({infoData:result});
-        console.log(result);
+        //console.log(result);
     }
     render(){
         let {history}=this.props;
