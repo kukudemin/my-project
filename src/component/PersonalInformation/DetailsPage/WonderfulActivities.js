@@ -10,19 +10,21 @@ import React from "react";
 import ReactDom from "react-dom";
 import {withRouter, Link} from 'react-router-dom';
 import "./WonderfulActivities.less"
+import {connect} from "react-redux"
 
 class WonderfulActivities extends React.Component {
 
 
     render() {
+        let {history}=this.props;
         return <div className="WonderfulActivitiesBox">
             <div className="WonderfulActivities-header">
-                <Link to={`/Profile`}>
-                     <span className="WonderfulActivities-img">
+                     <span className="WonderfulActivities-img" onClick={()=>{
+                         history.goBack(1)
+                     }}>
                     <img src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48"
                          alt=""/>
                 </span>
-                </Link>
                 <h3 className="WonderfulActivities-title">精彩活动</h3>
             </div>
             <div style={{width:"3.2rem",height:".44rem"}}>&npsp;</div>
@@ -257,4 +259,4 @@ class WonderfulActivities extends React.Component {
     }
 }
 
-export default WonderfulActivities;
+export default withRouter(connect()(WonderfulActivities))

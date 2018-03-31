@@ -37,14 +37,11 @@ route.get('/detail',async function (req,res) {
 });
 
 route.post('/detail/remind',async function (req,res) {
-    /*  传递id num ,个人信息 : 头像,用户名,  */
-  /*  let {id,dishNum ,img,clientName}=req.query;*/
-  let MyData=req.body;
     let {id,dishNum ,img,clientName}=req.body;
     let data=await utils.readJSON("userData.json");
     let dataInfo =await utils.aryFind(data.persons,id);
     let resolute= await utils.aryFind(data.persons,id,dishNum,"allDish");
-    resolute={...resolute,author:dataInfo.author,ico:dataInfo.ico};
+   /* resolute={...resolute,author:dataInfo.author,ico:dataInfo.ico};*/
     /*  修改数据条数  */
     resolute.remindPoint.count=parseInt(resolute.remindPoint.count)+1;
     /* 传递参数和头像 */  /*  重新写入文件  刷新或是重新登录时可以看到   */
@@ -54,8 +51,8 @@ route.post('/detail/remind',async function (req,res) {
     data.persons[id-1]=dataInfo;
     utils.writeJSON(data,"userData.json");
     res.send("success");
-    //res.send(resolute);
 });
+
 route.post('/detail/comment',async function (req,res) {
     let {id,dishNum ,comment}=req.body;
     let data=await utils.readJSON("userData.json");
@@ -64,6 +61,7 @@ route.post('/detail/comment',async function (req,res) {
     resolute.comment=comment;
     dataInfo.allDish[dishNum].comment=resolute.comment;
     data.persons[id-1]=dataInfo;
+    dataInfo.allDish[dishNum].comment=resolute.comment;
     utils.writeJSON(data,"userData.json");
     res.send("success");
 });

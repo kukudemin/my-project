@@ -27,8 +27,13 @@ import ExchangeTribute from "./component/PersonalInformation/DetailsPage/Exchang
 import MyCourse from "./component/PersonalInformation/DetailsPage/MyCourse";
 import MyMedal from "./component/PersonalInformation/DetailsPage/MyMedal";
 import SignInEveryDay from "./component/PersonalInformation/DetailsPage/SignInEveryDay";
+
+
+import Fu from "./container/university/Fu";
+
 import Search from "./container/Search"
 import Detail from "./container/Search/Detail"
+
 
 
 
@@ -59,6 +64,9 @@ ReactDOM.render(<Provider store={store}>
                 <Route path="/myCourse" component={MyCourse}/>
                 <Route path="/myMedal" component={MyMedal}/>
                 <Route path="/signInEveryDay" component={SignInEveryDay}/>
+
+                <Route path="/fu" component={Fu}/>
+
                 <Route path="/search" exact component={Search}/>
                 <Route path="/search/detail/:key" component={Detail}/>
 
