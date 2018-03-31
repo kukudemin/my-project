@@ -14,7 +14,7 @@ class Recipe extends React.Component{
     }
    componentWillMount(){
       // this.props.dianZan(this.props.alldataList);//
-       console.log("alldataList",this.props);
+       //console.log("alldataList",this.props);
    }
 
     render(){

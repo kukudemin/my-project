@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import {connect} from "react-redux"
 import  "./DetailTab.less"
 import {isLogin} from "../../api/profile";
+import "../../common/css/animate.min.css"
+import {withRouter} from "react-router-dom"
 
 
 class DetailTab extends React.Component{
@@ -34,9 +36,18 @@ componentWillMount(){
                 <ul className='infoFooter2'>
                     <li>
                         <div>
-                            <img src="https://image.hongbeibang.com/Fqv9VBHXG627znbKlZYnHQMTHVdc?200X200&imageView2/1/w/38/h/38" alt=""
+                            <img  ref='IMG' src="https://image.hongbeibang.com/Fqv9VBHXG627znbKlZYnHQMTHVdc?200X200&imageView2/1/w/38/h/38" alt=""
                                  onClick={ async (ev)=>{
-
+                                   /* 先判断是否登录 */
+                                    /* let loginId = await isLogin();
+                                     loginId = Number(loginId);
+                                     if (isNaN(loginId) || loginId === 0) {
+                                         this.props.history.push('/login');
+                                         return;
+                                     }*/
+                                     /*  添加动画效果 动画之后数字改变(执行回调)  */
+                                     let IMG =this.refs.IMG;
+                                     IMG.style.transition="wobble 3s linear";
                                     this.handNum();
                                  }}
                             />
@@ -51,12 +62,12 @@ componentWillMount(){
                     </li>
                     <li onClick={ async (ev)=>{
                         /*先验证是否已经登录 没有=> 登录页面  已经登录 弹出评论页面 */
-                        let loginId = await isLogin();
+                       /* let loginId = await isLogin();
                         loginId = Number(loginId);
                         if (isNaN(loginId) || loginId === 0) {
                             this.props.history.push('/login');
                             return;
-                        }
+                        }*/
                         this.handleDis()
                     }}>
                         <div ref='comment' >
@@ -69,4 +80,4 @@ componentWillMount(){
         )
     }
 }
-export default connect()(DetailTab)
+export default withRouter(connect()(DetailTab))

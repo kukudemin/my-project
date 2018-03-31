@@ -19,7 +19,6 @@ app.use(function (req,res,next) {
     next();
 });
 
-
 app.use(session({
     secret:"yangjiakun",
     resave:false,

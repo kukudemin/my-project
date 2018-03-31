@@ -4,9 +4,10 @@ import axios from './index';
 export function getNew() {
     return axios.get('/show/list');
 }
+
 /*根据id  (number获取) 具体的哪一个动态 */
 export function getOneNew(id) {
-    return axios.get('/show/list',id);
+    return axios.get('/show/list', id);
 }
 
 
@@ -16,11 +17,29 @@ export function allMaster() {
 }
 
 /*  食谱详情页  */
-export function cookDetail(id,dishNum) {
-    return axios.get('/circle/detail',id,dishNum);
+export function cookDetail(id, dishNum) {
+    return axios.get('/circle/detail', id, dishNum);
 }
 
 /*   点赞传递参数 第几认的第几个食谱  我的信息: 用户名头像  */
-export function cookZan(id,dishNum,imgMy,nameMy) {
-    return axios.post('/circle/detail',id,dishNum,imgMy,nameMy);
+export function cookZan(id, dishNum, imgMy, nameMy) {
+    let data = {id: id,
+        dishNum: dishNum,
+        img: imgMy,
+        clientName: nameMy
+    };
+    return axios.post('/circle/detail/remind', data);
+}
+
+
+/*   点赞传递参数 第几认的第几个食谱  我的信息: 用户名头像  */
+export function comment(id, dishNum, comment) {
+    debugger;
+    console.log(comment);
+    let data = {
+        id: id,
+        dishNum: dishNum,
+        comment:comment
+    };
+    return axios.post('/circle/detail/comment', data);
 }

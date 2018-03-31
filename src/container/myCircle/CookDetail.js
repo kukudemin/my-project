@@ -6,7 +6,7 @@ import "./CookDetail.less"
 import GerenInfo from "../../component/recipe/GerenInfo"
 import DetailTab from "../../component/recipe/DetailTab"
 import RecomendItem from "../../component/recipe/RecomendItem"
-import {getOneNew,cookDetail,allMaster,cookZan} from "../../api/circle";
+import {getOneNew,cookDetail,allMaster,cookZan,comment} from "../../api/circle";
 import utils from "../../common/js/utils"
 import Comment from "../../component/recipe/Comment"
 import action from "../../store/action/index"
@@ -16,40 +16,69 @@ class CookDetail extends React.Component{
     constructor(){
         super();
         this.state={
-            cookData:{}
+            cookData:{},val:5
         }
     }
     handleDisplay=(dis)=>{
         this.refs.comment.style.display=dis
     };
+
+    /*点赞 : 只能点击一次 */
    handZan= async (num)=>{
-       //console.log(num);
+       if(this.props.location.search){
+           localStorage.setItem("str",this.props.location.search)
+       }else{
+           localStorage.getItem("str")
+       }
+       let obj=utils.urlToObj(localStorage.getItem("str"));
+
        let loginId = await isLogin();
        loginId = Number(loginId);
        if (isNaN(loginId) || loginId === 0) {
-           //=>没登录,跳转到登录页面
            this.props.history.push('/login');
            return;
        }
-            /* 已经登录 获取登录id 从所有数据中获取登录用户的同户名,密码*/
             let resultInfo =await allMaster();
             let myInfo =await utils.aryFind(resultInfo,loginId);
-
-       let redcou= this.props.MyData.remindPoint
+       let redcou= this.props.MyData.remindPoint;
        redcou.count=parseInt(redcou.count)+1;
        redcou.data=[{clientName:myInfo.author,img:myInfo.icon},...redcou.data];
        this.setState({cookData:this.props.MyData});
-
        //更新服务器的数据  传递id num ,个人信息 : 头像,用户名,
-       let obj=utils.urlToObj(this.props.location.search);//{id.num}
-        cookZan(loginId,obj['dishNum'] ,myInfo.icon,myInfo.author);
-        console.log(this.props);
-    };
 
+       //let obj=utils.urlToObj(this.props.location.search);//{id.num}
+        cookZan(loginId,obj['dishNum'] ,myInfo.icon,myInfo.author);
+       this.props.history.push("/cookDetail")
+   };
+
+   /* 评论: 评论多次   */
+    toComment =async (data)=>{
+        if(this.props.location.search){
+            localStorage.setItem("str",this.props.location.search)
+        }else{
+            localStorage.getItem("str")
+        }
+        let obj=utils.urlToObj(localStorage.getItem("str"));
+
+
+        let loginId = await isLogin();
+        loginId = Number(loginId);
+        let resultInfo =await allMaster();
+        let myInfo =await utils.aryFind(resultInfo,loginId);
+        //let obj=utils.urlToObj(this.props.location.search);//{id.num}
+        comment(loginId,obj['dishNum'], data.comment);
+        this.setState({cookData:data});
+        this.props.history.push("/cookDetail/comment")
+
+    };
     async componentWillMount(){
-/*   bug: 页面刷新或是报错时就找不到id,和num了, 要 存一个缓存
- http://localhost:3000/#/cookDetail?id=1&dishNum=1*/
-        let obj=utils.urlToObj(this.props.location.search);
+        if(this.props.location.search){
+            localStorage.setItem("str",this.props.location.search)
+        }else{
+            localStorage.getItem("str")
+        }
+        let obj=utils.urlToObj(localStorage.getItem("str"));
+
         let result =await allMaster();
        let dataInfo =await utils.aryFind(result,obj.id);
        let resolute= await utils.aryFind(result,obj.id,obj['dishNum'],"allDish");
@@ -57,13 +86,13 @@ class CookDetail extends React.Component{
        this.props.dianZan(data);
        this.setState({cookData:data});
     }
-
     render(){
+        let {val}=this.state;
         let {history}=this.props;
-        console.log(this.props);
-        let {author='',ico='',num='',title='',img='',introduce='',ingredient=[],steps=[],remindPoint={"data":[]},tips='',comment={"data":[]}}=this.state.cookData;
+      console.log(this.props);
+        let {id,author='',ico='',num='',title='',img='',introduce='',ingredient=[],steps=[],remindPoint={"data":[]},tips='',comment={"data":[]}}=this.state.cookData;
 
-        console.log(this.props);
+        //console.log(this.props);
         return (
             <div className='cookDetail'>
                 <section className='detail-headerc'>
@@ -93,13 +122,22 @@ class CookDetail extends React.Component{
                                    <span>分量</span>
                                    <div className='middle'>
                                        <span onClick={(ev)=>{
-
+                                           val>0?val--:val;
+                                           this.setState({val});
                                        }}>-</span>
-                                       <input type="number" className='input' value='5' onChange={()=>{
-
+                                       <input ref='inputValue'
+                                              type="number"
+                                              className='input'
+                                              value={this.state.val}
+                                              onChange={(ev)=>{
+                                                 let  inpVal=this.refs.inputValue.value;
+                                                  this.setState({
+                                                        val:inpVal
+                                                  })
                                        }}/>
                                        <span onClick={(ev)=>{
-
+                                           val++;
+                                           this.setState({val});
                                        }}>+</span>
                                    </div>
                                    <span>份</span>
@@ -111,10 +149,16 @@ class CookDetail extends React.Component{
                                 {
                                     ingredient.map((item,ind)=>{
                                         for (let key in item){
+                                            let Num=/(\d+)/.exec(item[key]);
+                                            let text = /(\D+)/.exec(item[key]);
+                                            if(Num){
+                                            Num=Number(val)*Number(Num[1])
+                                        }else{Num=null}
+
                                             return (
                                                 <p  className='hang' key={ind}>
                                                     <span className='left'>{key}</span>
-                                                    <span className='right'>{item[key]}</span>
+                                                    <span className='right'>{Num}{text[1]}</span>
                                                 </p>
                                             )
                                         }
@@ -153,7 +197,7 @@ class CookDetail extends React.Component{
 
                                 </div>
                             }}/>
-                            <Route from="/cookDetail/comment" exact  component={()=>{
+                            <Route from={`/cookDetail/comment`} exact  component={()=>{
                                 return <div>
                                     { comment.data.map((item,index)=>{
                                         return  <RecomendItem bottomList='comment' data={item} key={index}/>
@@ -168,10 +212,12 @@ class CookDetail extends React.Component{
                 <section className='cook-footer'>
                     <DetailTab countCount={remindPoint.count} comCount={comment.count} handleDisplay={this.handleDisplay} handZan={this.handZan}/>
 
+                    {/*  评论部分 */}
                 </section>
-
                     <div ref="comment" style={{width:"100%",zIndex:"10000",position:"fixed",left:0,top:0,  height: "5.68rem",background:"#fff",display:"none"}}>
-                        <Comment handleDisplay={this.handleDisplay} />
+                        <Comment type='cook'
+                            handleDisplay={this.handleDisplay}
+                            toComment={this.toComment} />
                     </div>
 
             </div>
