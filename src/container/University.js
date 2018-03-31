@@ -32,7 +32,7 @@ export default class University extends Component {
             <div className="university">
                 <div className='text'>
                     <a>
-                        <span className='recommend active'>推荐</span>
+                        <span className='recommend active\'>推荐</span>
                     </a>
                     <a>
                         <span className='series' onClick={ev=>{

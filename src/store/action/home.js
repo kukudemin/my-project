@@ -8,5 +8,5 @@ const homeAction={
             homeData:await homeList()
         }
     }
-}
+};
 export default homeAction

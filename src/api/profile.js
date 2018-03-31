@@ -5,7 +5,7 @@ let md5 = require('blueimp-md5');
 export function login(userName, userPass) {
     return axios.post('/profile/login', {
         userName: userName,
-        pw: userPass
+        pw: md5(userPass)
     });
 }
 

@@ -3,6 +3,7 @@ import ReactDom from "react-dom";
 import {register} from "../api/profile";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom"
+import "./Login.less"
 class Register extends React.Component{
 
 
@@ -25,7 +26,7 @@ class Register extends React.Component{
                     <br/><br/>
                 </div>
 
-                <button onClick={ev => {
+                <button className="register-btn" onClick={ev => {
                     let {userNameInp, userPassInp} = this.refs,
                         userName = userNameInp.value,
                         userPass = userPassInp.value;

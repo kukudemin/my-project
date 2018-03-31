@@ -19,7 +19,7 @@ class NavList extends React.Component{
         if (data.length === 0) {
             return null;
         }
-        let ary=["/recipes","/newHand","/video","/radio","/recipes","/newHand","/video","/radio"];
+        let ary=["/recipes","/newHand","/video","/radio","/recipes","/wonderfulActivities","/video","/radio"];
         return <div className="navList">
             {
                 data.map((item,index)=>{

@@ -3,30 +3,40 @@ import PropTypes from 'prop-types'
 import './pay.less'
 import {courseData} from "../../api/university";
 import axios from 'axios'
+import Fu from "./Fu";
 export default class Pay extends Component {
     constructor() {
         super();
         this.state={
             data:[],
+            payFlag:false,
         };
     }
-    async componentWillMount() {
+    async componentWillMount(event) {
         let uId = localStorage.universityId;
         console.log(uId);
         let result = await courseData(uId);
         this.setState({
-            data: result
+            data: result,
         });
         console.log(result);
+    };
 
-    }
-
+    changePrice(ev){
+        this.setState({
+            payFlag:!ev,
+        })
+    };
 
     render() {
-        let {data}=this.state;
+        let {data,payFlag}=this.state;
+        let oFu = null;
+        if(payFlag){
+            oFu = <Fu changePrice={this.changePrice.bind(this)} flag={payFlag}/>
+        }
         return (
             <div className="pay">
-                <h1>
+                <h1 className='payTitle'>
                     <img onClick={ev=>{
                         this.props.history.goBack()
                     }} src="https://image.hongbeibang.com/FoTuxKG5pqYKuAsT8BjrflkAxEpj?48X48&imageView2/1/w/48/h/48" alt=""/>
@@ -54,6 +64,7 @@ export default class Pay extends Component {
                         <p>{data.hot}</p>
                     </div>
                 </div>
+
                 <div className='con'>
                     <h3>课程介绍</h3>
                     <p>1.{data.introduce}</p>
@@ -67,8 +78,13 @@ export default class Pay extends Component {
                     <h3>老师介绍</h3>
                     <img src={data.teacherImg} alt=""/>
                 </div>
-                <div className='subFooter'>
-                    付费进入  9.9
+                {oFu}
+                <div className='subFooter' onClick={event => {
+                    this.setState({
+                        payFlag : true,
+                    });
+                }}>
+                    付费进入  {data.price}
                 </div>
             </div>
         )

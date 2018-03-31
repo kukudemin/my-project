@@ -16,7 +16,8 @@ route.post("/login",(req,res)=>{
         return (item.userName===userName)&&(item.pw===pw);
     });
     if(info){
-       req.session.userId=info.id;
+        console.log(info);
+        req.session.userId=info.id;
        res.send("登录成功");
     }else {
         res.send("账号或者密码不对");
