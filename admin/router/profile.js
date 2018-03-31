@@ -21,8 +21,8 @@ route.post("/login",(req,res)=>{
     }else {
         res.send("账号或者密码不对");
     }
-    req.session.loginID = info['id'];
-    res.send('success');
+   /* req.session.loginID = info['id'];
+    res.send('success');*/
 });
 route.get("/login",(req,res)=>{
     res.send(req.session.userId+""||"0");
